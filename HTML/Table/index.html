@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Table</title>
+</head>
+
+<body>
+    <h1>Table</h1>
+    <p>table is used to arrange data in rows and columns</p>
+    <pre>
+    table 
+    table is a tag 
+    th is table headings 
+    tr is a table row 
+    td is table data 
+    border is to add line around table
+    border collapse is a attribute for table to combine borders 
+    cell padding is a attribute used to give padding inside cell 
+    cell spacing is a attribute used to give space b/w cells only works if we remove border collapse 
+    align is aattribute used to align elements 
+     </pre>
+    <hr>
+    <h2>Normal Table</h2>
+    <table border="1" style="border-collapse:collapse;" width="400">
+        <tr>
+            <th>movie</th>
+            <th>hero</th>
+            <th>heroine</th>
+        </tr>
+        <tr>
+            <td>captain america</td>
+            <td>steve rogers </td>
+            <td>peggy</td>
+        </tr>
+        <tr>
+            <td>iron man</td>
+            <td>tony stark </td>
+            <td>pepper</td>
+        </tr>
+        <tr>
+            <td>amazing spider man</td>
+            <td>peter</td>
+            <td>mary zain</td>
+        </tr>
+        <tr>
+            <td>thor</td>
+            <td>thor </td>
+            <td>-</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- cell pading table  -->
+     <h2>cell padding table </h2>
+     <table border="1" style="border-collapse:collapse;" width="400" cellpadding="10">
+        <tr>
+            <th>movie</th>
+            <th>hero</th>
+            <th>heroine</th>
+        </tr>
+        <tr>
+            <td>captain america</td>
+            <td>steve rogers </td>
+            <td>peggy</td>
+        </tr>
+        <tr>
+            <td>iron man</td>
+            <td>tony stark </td>
+            <td>pepper</td>
+        </tr>
+        <tr>
+            <td>amazing spider man</td>
+            <td>peter</td>
+            <td>mary zain</td>
+        </tr>
+        <tr>
+            <td>thor</td>
+            <td>thor </td>
+            <td>-</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- cell spacing  -->
+    <h2>cell spacing table </h2>
+    <table border="1"  width="400" cellspacing="10" align="center">
+        <tr>
+            <th>movie</th>
+            <th>hero</th>
+            <th>heroine</th>
+        </tr>
+        <tr>
+            <td>captain america</td>
+            <td>steve rogers </td>
+            <td>peggy</td>
+        </tr>
+        <tr>
+            <td>iron man</td>
+            <td>tony stark </td>
+            <td>pepper</td>
+        </tr>
+        <tr>
+            <td>amazing spider man</td>
+            <td>peter</td>
+            <td>mary zain</td>
+        </tr>
+        <tr>
+            <td>thor</td>
+            <td>thor </td>
+            <td>-</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>spanning table</h2>
+    <!-- spaning table  -->
+     <pre>
+        spanning means adjust our table with rows and columns not equal
+     </pre>
+     <!-- with out spanning  -->
+     <h3>With out spanning </h3>
+     <table border="1" style="border-collapse: collapse;" cellpadding="10">
+        <tr>
+            <th bgcolor="maroon">Logo</th>
+            <th bgcolor="gold">Top Menu</th>
+        </tr>
+        <tr>
+            <td bgcolor="gold">side menu</td>
+            <td bgcolor="cyan">world news</td>
+            <td bgcolor="cyan">financial</td>
+            <td bgcolor="maroon">list of adds</td>
+        </tr>
+        <tr>
+            <td bgcolor="cyan">technology</td>
+            <td bgcolor="cyan">sports</td>
+        </tr>
+        <tr>
+            <td bgcolor="gray">footer</td>
+        </tr>
+     </table>
+     <!-- with spanning -->
+     <h3>With spanning </h3>
+      <table border="1" style="border-collapse: collapse;" cellpadding="10">
+        <tr>
+            <th bgcolor="maroon">Logo</th>
+            <th bgcolor="gold" colspan="3">Top Menu</th>
+        </tr>
+        <tr>
+            <td bgcolor="gold" rowspan="2">side menu</td>
+            <td bgcolor="cyan">world news</td>
+            <td bgcolor="cyan">financial</td>
+            <td bgcolor="maroon" rowspan="2">list of adds</td>
+        </tr>
+        <tr>
+            <td bgcolor="cyan">technology</td>
+            <td bgcolor="cyan">sports</td>
+        </tr>
+        <tr>
+            <td bgcolor="gray" colspan="4">footer</td>
+        </tr>
+     </table>
+</body>
+
+</html>
