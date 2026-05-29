@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Pseudo class </title>
+    <style>
+        #hover-class:hover {
+            background-color: red;
+        }
+
+        #link-class:link {
+            color: red;
+        }
+
+        .target-class:target {
+            background-color: rgb(44, 97, 44);
+        }
+
+        #focus-class:focus {
+            background-color: blue;
+        }
+
+        .required-class:required {
+            background-color: red;
+        }
+
+        .optional-class input:optional {
+            background-color: orange;
+        }
+        .readonly-class input:read-only{
+            background-color:rgb(176, 241, 77);
+        }
+        .readwrite-class input:read-write{
+            background-color:rgb(241, 77, 203);
+        }
+        .valid-class input:valid{
+            background-color:rgb(255, 20, 98);
+        }
+        .invalid-class input:invalid{
+            background-color:rgb(2, 51, 40);
+        }
+        .disabled-class input:disabled{
+            background-color:rgb(214, 207, 65);
+        }
+        .default-class input:default+label{
+            background-color:red;
+        }
+        .checked-class input:checked+label{
+            background-color:rgb(241, 29, 245);
+        }
+        .inrange-class input:in-range{
+            color:red;
+            background-color:gold;
+        }
+        .outofrange-class input:out-of-range{
+            color:rgb(37, 0, 0);
+            background-color:rgb(39, 159, 210);
+        }
+        .enabled-class input:enabled{
+            background-color:pink;
+        }
+        .empty-class textarea:empty{
+            background-color:rgb(221, 124, 59);
+        }
+        .not-class p:not(.eliminate){
+            background-color:rgb(22, 206, 209);
+        }
+        .firstchild-class p:first-child{
+            background-color:red;
+        }
+        .lastchild-class p:last-child{
+            background-color:rgb(87, 241, 26);
+        }
+        .nth-child-class p:nth-child(2){
+            background-color:orangered;
+        }
+        .nth-last-child-class p:nth-last-child(1){
+            background-color:blue;
+        }
+        .first-of-type-class p:first-of-type{
+            background-color:purple;
+        }
+        .last-of-type-class p:last-of-type{
+            background-color:rgb(0, 102, 128);
+        }
+        .nth-of-type-class p:nth-of-type(3){
+            background-color:rgb(0, 102, 128);
+        }
+        .nth-last-type-class p:nth-last-of-type(3){
+            background-color:rgb(0, 102, 128);
+        }
+        .only-class p:only-child{
+            background-color:#074f;
+        }
+        .only-of-class p:only-of-type{
+            background-color:#d1c11c;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo class</h1>
+    <p>pseudo classes</p>
+    <img src="./pseudo-classes.png" width="300">
+    <hr>
+    <!-- hover  -->
+    <h2>hover</h2>
+    <p>hover is applicable for almost all tags</p>
+    <p id="hover-class">place cursor or mouse on me</p>
+    <hr>
+    <!-- link  -->
+    <h2>Link</h2>
+    <p>link is applicable for anchor tag only</p>
+    <p>link means the unvisited a tag</p>
+    <a href="https://www.google.com/?zx=1780058292893" id="link-class" target="_blank">open google</a>
+    <a href="https://www.facebook.com/" id="link-class" target="_blank">open facebook</a>
+    <hr>
+    <!-- target  -->
+    <h2>Target</h2>
+    <pre>target is used to highlight target section </pre>
+    <pre>it works only when id and a tag # same</pre>
+    <br><br>
+    <a href="#last">click me to go to last paragraph</a>
+    <!-- paragraphs  -->
+    <h4>Paragraph 1</h4>
+    <div>
+        <p id="first" class="target-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, consequatur
+            corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus similique
+            officia nisi maxime numquam quia ducimus saepe! Id! Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Sunt, consequatur corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id! mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia
+            nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!</p>
+        <h4>Paragraph 2</h4>
+        <p class="target-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, consequatur corporis
+            fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus similique officia nisi
+            maxime numquam quia ducimus saepe! Id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt,
+            consequatur corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id! mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia
+            nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!</p>
+        <h4>Paragraph 3</h4>
+        <p class="target-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, consequatur corporis
+            fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus similique officia nisi
+            maxime numquam quia ducimus saepe! Id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt,
+            consequatur corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id! mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia
+            nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!</p>
+        <h4>Paragraph 4</h4>
+        <p class="target-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, consequatur corporis
+            fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus similique officia nisi
+            maxime numquam quia ducimus saepe! Id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt,
+            consequatur corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id! mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia
+            nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!</p>
+        <h4>Paragraph 5</h4>
+        <p class="target-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, consequatur corporis
+            fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus similique officia nisi
+            maxime numquam quia ducimus saepe! Id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt,
+            consequatur corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id! mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia
+            nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!</p>
+        <h4>Paragraph 6</h4>
+        <p id="last" class="target-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, consequatur
+            corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio necessitatibus similique
+            officia nisi maxime numquam quia ducimus saepe! Id! Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Sunt, consequatur corporis fugiat cum, aperiam doloremque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id! mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia
+            nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus
+            similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim facere distinctio
+            necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus soluta enim
+            facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe! Id!mque doloribus
+            soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia ducimus saepe!
+            Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime numquam quia
+            ducimus saepe! Id!mque doloribus soluta enim facere distinctio necessitatibus similique officia nisi maxime
+            numquam quia ducimus saepe! Id!</p>
+    </div>
+    <a href="#first">click me to go to first paragraph</a>
+    <hr>
+    <!-- focus  -->
+    <h2>Focus</h2>
+    <p>focus is used on inputs </p>
+    Name: <input type="text" id="focus-class">
+    <hr>
+    <!-- required  -->
+    <h2>Required</h2>
+    <p>required is used on inputs which has required attribute</p>
+    Name1: <input type="text" class="required-class" required>
+    Name2: <input type="text" class="required-class" required>
+    Name3: <input type="text" class="required-class">
+    <hr>
+    <!-- optional  -->
+    <h2>Optional</h2>
+    <p>optional is used on inputs which has no required attribute</p>
+    <p>required and optional are opposite</p>
+    <div class="optional-class">
+        Name1: <input type="text" required>
+        Name2: <input type="text">
+        <br><br>
+        Name3: <input type="text">
+        Name4: <input type="text" required>
+    </div>
+    <hr>
+    <!-- read only  -->
+     <h2>Read only</h2>
+     <p>it is used on inputs which has read only attribute</p>
+     <div class="readonly-class">
+        Name1: <input type="text" >
+        Name2: <input type="text" readonly>
+        <br><br>
+        Name3: <input type="text" readonly>
+        Name4: <input type="text" >
+     </div>
+     <hr>
+     <!-- read write  -->
+     <h2>Read write</h2>
+     <p>it is used on inputs and opposite to read write</p>
+     <div class="readwrite-class">
+        Name1: <input type="text" >
+        Name2: <input type="text" readonly>
+        <br><br>
+        Name3: <input type="text" readonly>
+        Name4: <input type="text" >
+     </div>
+     <hr>
+     <!-- valid -->
+     <h2>Valid</h2>
+     <p>it is used on inputs which is valid</p>
+     <div class="valid-class">
+        Name1: <input type="text" minlength="4" >
+        Name2: <input type="text" >
+        <br><br>
+        Name3: <input type="text" >
+        Name4: <input type="text" >
+     </div>
+     <hr>
+     <!-- in valid -->
+     <h2>In Valid</h2>
+     <p>it is used on inputs which is invalid</p>
+     <div class="invalid-class">
+        Name1: <input type="text" minlength="4" >
+        Name2: <input type="text" >
+        <br><br>
+        Name3: <input type="text" >
+        Name4: <input type="text" >
+     </div>
+     <hr>
+     <!-- disabled -->
+     <h2>Disabled</h2>
+     <p>it is a attribute  on inputs to make disable means no interaction</p>
+     <div class="disabled-class">
+        Name1: <input type="text" minlength="4" disabled >
+        Name2: <input type="text" >
+        <br><br>
+        Name3: <input type="text" >
+        Name4: <input type="text" disabled >
+     </div>
+     <hr>
+     <!-- default -->
+     <h2>Default</h2>
+     <p>it is a attribute  on inputs to target defalut means checked or selected</p>
+     <div class="default-class">
+        <p>Languages Know</p>
+       <input type="checkbox"> <label>HTML</label><br>
+       <input type="checkbox" checked>
+       <label>CSS</label><br>
+       <input type="checkbox"> <label>Java</label><br>
+       <input type="checkbox"> <label>Python</label>
+     </div>
+     <hr>
+     <!-- checked -->
+     <h2>Checked</h2>
+     <p>it is a attribute  on inputs to target checked items only </p>
+     <div class="checked-class">
+        <p>Languages Know</p>
+       <input type="checkbox"> <label>HTML</label><br>
+       <input type="checkbox">
+       <label>CSS</label><br>
+       <input type="checkbox"> <label>Java</label><br>
+       <input type="checkbox"> <label>Python</label>
+     </div>
+     <hr>
+      <!-- in range -->
+     <h2>In Range</h2>
+     <p>it is applied to inputs type="number" when number is in range</p>
+     <div class="inrange-class">
+        <input type="number" min="2" max="10" value="1">
+     </div>
+     <hr>
+     <!-- out of range -->
+     <h2>out of Range</h2>
+     <p>it is applied to inputs type="number" when number is out of range</p>
+     <div class="outofrange-class">
+        <input type="number" min="2" max="10" value="4">
+     </div>
+     <hr>
+      <!-- enabled -->
+     <h2>Enabled</h2>
+     <p>it is opposite to disabled</p>
+     <div class="enabled-class">
+        Name1: <input type="text" minlength="4" disabled >
+        Name2: <input type="text" >
+        <br><br>
+        Name3: <input type="text" >
+        Name4: <input type="text" disabled >
+     </div>
+     <hr>
+      <!-- empty-->
+     <h2>Empty</h2>
+     <p>it targets on  no content tags</p>
+     <div class="empty-class">
+        Text1: <textarea name="" id="">Hello</textarea>
+        Text2: <textarea name="" id=""></textarea><br><br>
+        Text3: <textarea name="" id=""></textarea>
+        Text4: <textarea name="" id="">Message</textarea>
+     </div>
+     <hr>
+      <!-- not-->
+     <h2>Not</h2>
+     <p>it is used to eleminate</p>
+     <div class="not-class">
+        <p class="eliminate1">I am Paragraph</p>
+        <p class="eliminate">I am Paragraph</p>
+        <p class="eliminate3">I am Paragraph</p>
+        <p class="eliminate4">I am Paragraph</p>
+     </div>
+     <hr>
+     <!-- first child  -->
+      <h2>First Child</h2>
+      <p>targets first child only</p>
+      <div class="firstchild-class">
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+      </div>
+      <hr>
+     <!-- last child  -->
+      <h2>Last Child</h2>
+      <p>targets last  child only</p>
+      <div class="lastchild-class">
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+      </div>
+      <hr>
+     <!-- nth child  -->
+      <h2>Nth Child</h2>
+      <p>targets any nth  child given from first</p>
+      <div class="nth-child-class">
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+        <p class="para4">Iam Paragraph 4</p>
+      </div>
+      <hr>
+     <!-- nth child  -->
+      <h2>Nth last  Child</h2>
+      <p>targets any nth child given from last</p>
+      <div class="nth-last-child-class">
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+        <p class="para4">Iam Paragraph 4</p>
+      </div>
+      <hr>
+     <!-- first of type  -->
+      <h2>First of Type</h2>
+      <p>targets first child but in same type order does not matter</p>
+      <p>normally para1 is not  a first child but in p tags it is first </p>
+      <div class="first-of-type-class">
+        <h5>Iam Heading 1</h5>
+        <h5>Iam Heading 2</h5>
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+        <p class="para4">Iam Paragraph 4</p>
+        <p class="para5">Iam Paragraph 5</p>
+        <p class="para6">Iam Paragraph 6</p>
+      </div>
+      <hr>
+     <!-- last of type  -->
+      <h2> Last of Type</h2>
+      <p>targets last child but in same type order does not matter</p>
+      <p>normally para4 is not  a last child but in p tags it is last </p>
+      <div class="last-of-type-class">
+        <h5>Iam Heading 1</h5>
+        <h5>Iam Heading 2</h5>
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+        <p class="para4">Iam Paragraph 4</p>
+        <p class="para5">Iam Paragraph 5</p>
+        <p class="para6">Iam Paragraph 6</p>
+        <h5>Iam Heading 3</h5>
+      </div>
+      <hr>
+     <!-- nth of type  -->
+      <h2> nth of type</h2>
+      <p>targets any nth child but in same type order does not matter</p>
+      <p>normally para3 is not  a 3rd  child but in p tags it is 3rd </p>
+      <div class="nth-of-type-class">
+        <h5>Iam Heading 1</h5>
+        <h5>Iam Heading 2</h5>
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+        <p class="para4">Iam Paragraph 4</p>
+        <p class="para5">Iam Paragraph 5</p>
+        <p class="para6">Iam Paragraph 6</p>
+        <h5>Iam Heading 3</h5>
+      </div>
+      <hr>
+     <!-- nth last  of type  -->
+      <h2> nth last of type</h2>
+      <p>targets any nth child  from last but in same type order does not matter</p>
+      <p>normally para4 is not  a 3rd  from last but in p tags it is 3rd </p>
+      <div class="nth-last-type-class">
+        <h5>Iam Heading 1</h5>
+        <h5>Iam Heading 2</h5>
+        <p class="para1">Iam Paragraph 1</p>
+        <p class="para2">Iam Paragraph 2</p>
+        <p class="para3">Iam Paragraph 3</p>
+        <p class="para4">Iam Paragraph 4</p>
+        <p class="para5">Iam Paragraph 5</p>
+        <p class="para6">Iam Paragraph 6</p>
+        <h5>Iam Heading 3</h5>
+      </div>
+      <hr>
+     <!-- only child -->
+      <h2> only child</h2>
+      <p>parent should have only one child</p>
+      <div class="only-class">
+        <p class="para1">Iam Paragraph 1</p>
+      </div>
+      <hr>
+     <!-- only of type -->
+      <h2> only of child</h2>
+      <p>parent can have many childs but same type means only one tag</p>
+      <div class="only-of-class">
+        <h4>Iam heading <h4></h4></h4>
+        <p class="para1">Iam Paragraph 1</p>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eaque molestiae sapiente dicta laudantium animi. Minima eveniet doloribus quibusdam sint maiores voluptatum aspernatur inventore, nesciunt perferendis ex dignissimos hic consequuntur iste molestias aliquid ea, quae placeat asperiores a ullam!</div>
+      </div>
+</body>
+
+</html>

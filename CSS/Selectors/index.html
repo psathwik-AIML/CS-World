@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Selectors</h1>
+    <pre>selectors are used in internal and external css
+    to tell that for which tag we should apply css</pre>
+    <h2>Types of selectors</h2>
+    <ol>
+        <li>Simple Selectors </li>
+        <li>combinator Selectors</li>
+        <li>pseudo - element Selectors</li>
+        <li>Attribute Selectors</li>
+        <li>pseudo -class Selectors</li>
+    </ol>
+    <hr>
+    <!-- simple selector  -->
+    <h2>Simple selector</h2>
+    <pre style="background-color:brown;">
+        syntax:
+
+                tag-name{
+                    property:value;
+                }
+    </pre>
+    <br><br>
+    <h5>class based</h5>
+    <p class="special">A paragraph is a self-contained unit of discourse in writing that deals with a particular point
+        or idea.</p>
+    <h5>Id based</h5>
+    <p id="unique">A paragraph is a self-contained unit of discourse in writing that deals with a particular point or
+        idea.</p>
+    <h5>Tag based</h5>
+    <p>A paragraph is a self-contained unit of discourse in writing that deals with a particular point or idea.</p>
+    <p>A paragraph is a self-contained unit of discourse in writing that deals with a particular point or idea.</p>
+    <h5>class based</h5>
+    <p class="special">A paragraph is a self-contained unit of discourse in writing that deals with a particular point
+        or idea.</p>
+    <hr>
+    <!-- combinator selector  -->
+    <h2>Combinator selectors</h2>
+    <pre>combinator selector is used on combination of tags / classes</pre>
+    <h3>Types of combinator selectors </h3>
+    <ul>
+        <li><a href="./Combinators/child-selector.html" target="_blank">Child selector (>) </a></li>
+        <li><a href="./Combinators/descendent-selector.html" target="_blank">Descendent selector (space)</a></li>
+        <li><a href="./Combinators/adjacent-sibling.html" target="_blank">Adjacent sibling selector (+)</a></li>
+        <li><a href="./Combinators/general-sibling.html" target="_blank">General Sibling selector (-)</a></li>
+    </ul>
+    <hr>
+    <h2>Pseudo Elements selector</h2>
+    <pre>used to style a specific part of selected elements 
+    </pre>
+    <pre style="background-color: brown;">
+        syntax:
+           
+           selector::pseudo-element{
+                property:value;
+           }
+    </pre>
+    <pre>commonly used pseudo elements:
+        <ul>
+            <li>::first-letter</li>
+            <li>::first-line</li>
+            <li>::before</li>
+            <li>::after</li>
+            <li>::selection</li>
+        </ul>
+    </pre>
+    <!-- first letter  -->
+     <h3>First Letter</h3>
+    <div class="box box1">
+        <p>I am Paragraph 1</p>
+        <p>I am Paragraph 2</p>
+        <p>I am Paragraph 3</p>
+        <p>I am Paragraph 4</p>
+        <p>I am Paragraph 5</p>
+    </div>
+     <!-- first line  -->
+     <h3>First Line</h3>
+    <div class="box box2">
+        <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph</p>
+        <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph</p>
+        <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph</p>
+        <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph</p>
+        <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph</p>
+    </div>
+    <!-- before  -->
+     <h3>Before</h3>
+     <div class="box box3">
+        <p>I am Para 1</p>
+        <p>I am Para 2</p>
+        <p>I am Para 3</p>
+        <p>I am Para 4</p>
+        <p>I am Para 5</p>
+     </div>
+    <!-- after -->
+     <h3>After</h3>
+     <div class="box box4">
+        <p>I am Para 1</p>
+        <p>I am Para 2</p>
+        <p>I am Para 3</p>
+        <p>I am Para 4</p>
+        <p>I am Para 5</p>
+     </div>
+    <!-- selection -->
+     <h3>Selection</h3>
+     <div class="box box5">
+        <pre>select text and see difference</pre>
+        <p>I am Para 1</p>
+        <p>I am Para 2</p>
+        <p>I am Para 3</p>
+     </div>
+    <hr>
+    <h2>Attribute Selector</h2>
+    <pre>
+        used to style an element with specific attribute or attribute value
+    </pre>
+    <pre style="background-color: brown;">
+        syntax: 
+            selector[attribute name]{
+                property:value;
+            }
+
+            <img src="attribute syntax.png" alt="syntax">
+    </pre>
+    <div class="box container">
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto laboriosam in sint laborum pariatur quos dolores velit molestias vero deserunt.</p>
+        <input type="text" value="name">
+        <input type="email">
+        <input type="password">
+    </div>
+    <hr>
+    <h2>Pseudo class Selector</h2>
+    <pre>
+        used to style an element based on its state
+    </pre>
+    <pre style="background-color: brown;">syntax:
+
+        selector:pseudo-class{
+            property:value;
+        }
+    </pre>
+    <a href="pseudo-class.html" target="_blank">Pseudo class Website</a>
+</body>
+
+</html>

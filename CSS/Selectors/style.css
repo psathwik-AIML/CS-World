@@ -1,0 +1,57 @@
+/* simple selector  */
+
+/* tag based  */
+p{
+    color:gold;
+}
+
+/* id based  */
+#unique{
+    color:green;
+}
+
+/* class based  */
+.special{
+    color:red;
+}
+
+/* pseudo selector  */
+.box p{
+    color:white;
+}
+/* first-letter */
+.box1 p::first-letter{
+    color:red;
+}
+/* first line  */
+.box2 p::first-line{
+    color:rgb(45, 230, 25);
+}
+
+/* before  */
+.box3 p::before{
+    content:"before ";
+    color:orange;
+}
+/* after  */
+.box4 p::after{
+    content:" after";
+    color:purple;
+}
+
+/* selection  */
+.box5 p::selection{
+    color:red;
+    background-color:gold;
+}
+
+/* attrubute selector  */
+
+/* only attribute  */
+.container input[value]{
+    background-color:red;
+}
+/* attribute and value */
+.container input[type="password"]{
+    background-color:blue;
+}
