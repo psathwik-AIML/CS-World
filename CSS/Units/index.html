@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        :root{
+            font-size:20px;
+        }
+        .parent{
+            border:3px solid rgb(74, 33, 255);
+            width:400px;
+            height:300px;
+            padding-top:30px;
+            font-size:20px;
+        }
+        .pixel-child{
+            background-color:rgb(74, 245, 188);
+            width:200px;
+            height:40px;
+        }
+        .percentage-child{
+            background-color:rgb(164, 49, 132);
+            width:50%;
+            height:40%;
+        }
+        .viewport-child{
+            background-color:rgb(41, 130, 53);
+            width:50vw;
+            height:40vh;
+        }
+        .rem-child{
+            background-color:rgb(245, 125, 95);
+            width:4rem;
+            height:2rem;
+        }
+        .em-child{
+            background-color:gold;
+            width:6em;
+            height:2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Units</h1>
+    <p>units are used with padding ,fonts,margin ,borders ... etc</p>
+    <img src="./units.png" alt="units-image" width="300">
+    <hr>
+    <!-- pixels  -->
+    <h2>Pixels -px</h2>
+    <p>these unit is fixed value</p>
+    <div class="parent">
+        <div class="pixel-child"></div>
+    </div> 
+    <hr>
+    <!-- percentage - %  -->
+    <h2>Percentage - %</h2>
+    <p>these unit is based on parent element</p>
+    <div class="parent">
+        <div class="percentage-child"></div>
+    </div> 
+    <hr>
+    <!-- vw / vh- %  -->
+    <h2>viewport width and view port height- %</h2>
+    <p>these unit is based on screen</p>
+    <div class="parent">
+        <div class="viewport-child"></div>
+    </div> 
+    <hr>
+    <!-- rem -->
+    <h2>rem</h2>
+    <p>these unit is based and depends on the font size of root element ( html tag ) by default it is 16px</p>
+    <div class="parent">
+        <div class="rem-child"></div>
+    </div> 
+    <hr>
+    <!-- em -->
+    <h2>em</h2>
+    <p>these unit is based and depends on the font size of parent element </p>
+    <div class="parent">
+        <div class="em-child"></div>
+    </div> 
+</body>
+</html>
