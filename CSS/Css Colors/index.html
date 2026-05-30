@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        .container{
+            border:2px solid blue;
+            width:400px;
+            height:200px;
+        }
+        .box{
+            width:50px;
+            height:50px;
+        }
+        .name{
+            background-color:red;
+        }
+        .hex{
+            background-color:#c3a8b5;
+        }
+        .rgb{
+            background-color:rgb(20,80,31);
+        }
+        .hsl{
+            background-color:hsl(30,100%,30%);
+        }
+        .rgba{
+            background-color:rgba(200,10,94,0.7);
+        }
+        .hsla{
+            background-color:hsla(100,90%,40%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Colors</h1>
+    <p>colors in css we can give many formats 
+        <ul>
+            <li>color name</li>
+            <li>hexa decimal</li>
+            <li>rgb</li>
+            <li>hsl</li>
+            <li>rgba</li>
+            <li>hsla</li>
+        </ul>
+    </p>
+    <hr>
+    <!-- color name  -->
+    <h2>color name</h2>
+    <p>normally we can give color name</p>
+    <div class="container">
+        <div class="box name"></div>
+    </div>
+    <hr>
+    <!-- hexa decimal   -->
+    <h2>Hexa Decimal</h2>
+    <p>hexa decimal has 16 characters 
+        0-9 and a-f
+        starts with #
+    </p>
+    <div class="container">
+        <div class="box hex"></div>
+    </div>
+    <hr>
+    <!-- rgb    -->
+    <h2>rgb</h2>
+    <p>rgb is red blue green by combination of these 3 we can get many colors
+        rgb(0-255,0-255,0-255)
+    </p>
+    <div class="container">
+        <div class="box rgb"></div>
+    </div>
+    <hr>
+    <!-- hsl   -->
+    <h2>hsl</h2>
+    <p>hsl is hue saturation lightness by combination of these 3 we can get many colors
+        <br>
+        h- 0 to 360 deg
+        s- 0 to 100 %
+        l- 0 to 100 % 
+    </p>
+    <div class="container">
+        <div class="box hsl"></div>
+    </div>
+    <hr>
+    <!-- rgba  -->
+    <h2>rgba</h2>
+    <p>rgb is red blue green alphaopacity by combination of these 3 we can get many colors
+        rgba(0-255,0-255,0-255)
+        a - 0-1 
+    </p>
+    <div class="container">
+        <div class="box rgba"></div>
+    </div>
+    <hr>
+    <!-- hsla  -->
+    <h2>hsla</h2>
+    <p>hsl is hue saturation lightness by combination of these 3 we can get many colors
+        <br>
+        h- 0 to 360 deg
+        s- 0 to 100 %
+        l- 0 to 100 % 
+        a- 0 to 1
+    </p>
+    <div class="container">
+        <div class="box hsla"></div>
+    </div>
+</body>
+</html>
