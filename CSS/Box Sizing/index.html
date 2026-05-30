@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            font-size:30px;
+        }
+        .box1{
+            background-color:rgb(225, 71, 71);
+            box-sizing:content-box;
+            padding-right:50px;
+            border:10px solid gold;
+        }
+        .box2{
+            background-color:rgb(100, 159, 67);
+            box-sizing:border-box;
+            padding-right:50px;
+            border:10px solid gold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Box Sizing</h1>
+    <p>box sizing is a css property and it has two values  
+        <ul>
+            <li>content-box</li>
+            <li>border-box</li>
+        </ul>
+    </p>
+    <p>By default all elements has content box only</p>
+    <hr>
+    <h2>Content Box</h2>
+    <div class="box box1">
+        Box 1
+    </div>
+    <br><br>
+    <hr>
+    <h2>Border Box</h2>
+    <div class="box box2">
+        Box 2
+    </div>
+</body>
+</html>
