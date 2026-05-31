@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+        }
+        .linear{
+            background:linear-gradient(30deg,red,blue);
+        }
+        .radial{
+            background:radial-gradient(red,blue)
+        }
+        .repeat-linear{
+            background:repeating-linear-gradient(to bottom right ,red,blue 20px,gold 40px)
+        }
+        .repeat-radial{
+            background:repeating-radial-gradient(orange,purple 40px)
+        }
+        .text{
+            font-size:100px;
+            color:transparent;
+            background:linear-gradient(red,blue);
+            background-clip:text;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gradients</h1>
+    <p>for using background color transitions we use this</p>
+    <p>4 types:
+        <br>
+        <ul>
+            <li>linear gradient</li>
+            <li>radial gradient</li>
+            <li>repeating linear gradient</li>
+            <li>repeating radial gradient</li>
+        </ul>
+    </p>
+    <hr>
+    <!-- linear  -->
+    <h2>linear gradient</h2>
+    <p>colors in horizontal application</p>
+    <div class="linear box"></div>
+    <hr>
+    <!-- radial  -->
+    <h2>radial gradient</h2>
+    <p>colors in circular application</p>
+    <div class="radial box"></div>
+    <hr>
+    <!-- repeat linear  -->
+    <h2>repeat linear gradient</h2>
+    <p>same as linear but colors will repeat if we give width for colors</p>
+    <div class="repeat-linear box"></div>
+    <hr>
+    <!-- repeat radial  -->
+    <h2>repeat radial gradient</h2>
+    <p>same as radial but colors will repeat if we give width for colors</p>
+    <div class="repeat-radial box"></div>
+    <hr>
+    <!-- text gradient-->
+    <h2>text gradient</h2>
+    <p>gradient for text</p>
+    <h3 class="text" >Hello World</>
+</body>
+</html>
