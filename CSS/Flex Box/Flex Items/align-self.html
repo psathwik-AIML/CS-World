@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self</title>
+    <style>
+        .parent {
+            border: 2px solid blue;
+            width: 500px;
+            height: 400px;
+            display: flex;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+        }
+
+        .child-1 {
+            background-color: rgb(197, 42, 42);
+            align-self: center;
+        }
+
+        .child-2 {
+            background-color: rgb(81, 171, 81);
+            align-self: flex-start;
+        }
+
+        .child-3 {
+            background-color: rgb(183, 176, 75);
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Align Self</h1>
+    <p>we can change layout for single item on cross axis</p>
+    <hr>
+    <div class="parent">
+        <div class="child-1 child">child 1</div>
+        <div class="child-2 child">child 2</div>
+        <div class="child-3 child">child 3</div>
+    </div>
+</body>
+
+</html>

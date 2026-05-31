@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Direction</title>
+    <style>
+        .parent{
+            border:2px solid blue;
+            width:500px;
+            height:400px;
+            display:flex;
+        }
+        .child{
+            width:100px;
+            height:100px;
+        }
+        .child-1{
+            background-color:rgb(197, 42, 42);
+        }
+        .child-2{
+            background-color:rgb(81, 171, 81);
+        }
+        .child-3{
+            background-color:rgb(183, 176, 75);
+        }
+        .row{
+            flex-direction:row;
+        }
+        .column{
+            flex-direction:column;
+        }
+        .row-reverse{
+            flex-direction:row-reverse;
+        }
+        .column-reverse{
+            flex-direction:column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Direction</h1>
+    <p>flex direction property has 4 values
+        <br>
+        <ul>
+            <li>row</li>
+            <li>column</li>
+            <li>row-reverse</li>
+            <li>column-reverse</li>
+        </ul>
+    </p>
+    <hr>
+    <!-- row  -->
+    <h2>Row</h2>
+    <div class="row parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <hr>
+    <!-- column  -->
+    <h2>column</h2>
+    <div class="column parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <!-- row reverse  -->
+    <h2>Row reverse</h2>
+    <div class="row-reverse parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <!-- column reverse -->
+    <h2>column reverse</h2>
+    <div class="column-reverse parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal Flex Box</title>
+    <style>
+        .parent{
+            border:2px solid blue;
+            width:500px;
+            height:400px;
+            /* flex properties  */
+            display:flex;
+        }
+        .child{
+            width:100px;
+            height:100px;
+        }
+        .child-1{
+            background-color:rgb(197, 42, 42);
+        }
+        .child-2{
+            background-color:rgb(81, 171, 81);
+        }
+        .child-3{
+            background-color:rgb(183, 176, 75);
+        }
+    </style>
+</head>
+<body>
+    <h1>Normal Flex Box</h1>
+    <p>if i apply display flex to parent all childs will be in row because by default direction is row</p>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+</body>
+</html>

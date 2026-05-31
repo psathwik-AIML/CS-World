@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        .parent{
+            border:2px solid blue;
+            width:500px;
+            height:400px;
+            /* flex properties  */
+            display:flex;
+        }
+        .child{
+            width:100px;
+            height:100px;
+        }
+        .child-1{
+            background-color:rgb(197, 42, 42);
+        }
+        .child-2{
+            background-color:rgb(81, 171, 81);
+        }
+        .child-3{
+            background-color:rgb(183, 176, 75);
+        }
+        .wrap{
+            flex-wrap:wrap;
+        }
+        .no-wrap{
+            flex-wrap:nowrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Wrap</h1>
+    <p>if items not sufficient in row or column it will go to next line</p>
+    <p>flex wrap has 
+        <br>
+        <ul>
+            <li>wrap</li>
+            <li>no wrap</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>wrap</h2>
+    <div class="wrap parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <hr>
+    <h2>no wrap</h2>
+    <div class="no-wrap parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+</body>
+</html>

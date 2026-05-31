@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Content</title>
+    <style>
+        .parent{
+            border:2px solid blue;
+            width:500px;
+            height:600px;
+            /* flex properties  */
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .child{
+            width:100px;
+            height:100px;
+        }
+        .child-1{
+            background-color:rgb(197, 42, 42);
+        }
+        .child-2{
+            background-color:rgb(81, 171, 81);
+        }
+        .child-3{
+            background-color:rgb(183, 176, 75);
+        }
+        .flex-start{
+            align-content:center;
+        }
+        .flex-end{
+            align-content:flex-end;
+        }
+        .center{
+            align-content:center;
+        }
+        .between{
+            align-content:space-between;
+        }
+        .around{
+            align-content:space-around;
+        }
+        .evenly{
+            align-content:space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h1>Align Content</h1>
+    <p>it is used for alignment based on cross axis</p>
+    <img src="../flex-box-architecture.png" width="400">
+    <br>
+    <p>align content property has values</p>
+    <br>
+    <ul>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>space-between</li>
+        <li>space-around</li>
+        <li>space-evenly</li>
+    </ul>
+    <hr>
+    <!-- flex start -->
+    <h2>flex start</h2>
+    <p>in cross axis all items go to start</p>
+    <div class="flex-start parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <hr>
+    <!-- flex end -->
+    <h2>flex end</h2>
+    <p>in cross axis all items go to end</p>
+    <div class="flex-end parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <!-- center-->
+    <h2>center</h2>
+    <p>in cross axis all items go to center</p>
+    <div class="center parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <!-- space between-->
+    <h2>space between</h2>
+    <p>in cross axis all items have space in between</p>
+    <div class="between parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <!-- space around-->
+    <h2>space around</h2>
+    <p>in cross axis all items have space around</p>
+    <div class="around parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <!-- space evenly-->
+    <h2>space evenly</h2>
+    <p>in cross axis all items have equal space left and right</p>
+    <div class="evenly parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+
+</body>
+</html>
