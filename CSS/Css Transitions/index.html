@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:40px;
+        }
+        .box:hover{
+            width:400px;
+        }
+        .box1{
+            background-color:rgb(199, 68, 68);
+        }
+        .box2{
+            background-color:rgb(199, 199, 68);
+            transition:width 4s ease;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Transitions</h1>
+    <p>CSS transition is a property that lets an element change smoothly from one state to another over time, instead of changing instantly</p>
+    <pre>
+        transition timing functions 
+        <ul>
+            <li>linear</li>
+            <li>ease</li>
+            <li>ease in</li>
+            <li>ease out</li>
+            <li>ease in out</li>
+        </ul>
+    </pre>
+    <hr>
+    <br>
+    <h2>With out transition</h2>
+    <div class="box box1">Box 1</div>
+    <br><br>
+    <h2>With transition</h2>
+    <div class="box box2">Box 2</div>
+</body>
+</html>
