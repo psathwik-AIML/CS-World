@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+        .container{
+            border:1px solid blue;
+            width:500px;
+            height:400px;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .box{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            transition:all 3s;
+        }
+        .translate{
+            background-color:rgb(78, 78, 145);
+        }
+        .translate:hover{
+            transform:translate(100px,10px);
+        }
+        .scale{
+            background-color:rgb(78, 145, 79);
+        }
+        .scale:hover{
+            transform:scale(2);
+        }
+        .rotate{
+            background-color:rgb(145, 78, 140);
+        }
+        .rotate:hover{
+            transform:rotate(40deg);
+        }
+        .skew{
+            background-color:rgb(145, 94, 78);
+        }
+        .skew:hover{
+            transform:skew(40deg);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Transformations</h1>
+    <p>They let you change an element’s shape, position, size, or angle without affecting normal page layout.</p>
+    <pre>
+        transform property has four 
+        <ul>
+            <li>translate</li>
+            <li>scale</li>
+            <li>rotate</li>
+            <li>skew</li>
+        </ul>
+    </pre>
+    <hr>
+    <!-- translate  -->
+    <h2>Translate</h2>
+    <p>changes width and height in x and y axis</p>
+    <p>hover on box to see changes </p>
+    <div class="container">
+        <div class="translate box">Box</div>
+    </div>
+    <hr>
+    <!-- scale  -->
+    <h2>Scale</h2>
+    <p>changes size </p>
+    <p>hover on box to see changes </p>
+    <div class="container">
+        <div class="scale box">Box</div>
+    </div>
+    <hr>
+    <!-- rotate  -->
+    <h2>Rotate</h2>
+    <p>rotates element to some angle</p>
+    <p>hover on box to see changes </p>
+    <div class="container">
+        <div class="rotate box">Box</div>
+    </div>
+    <!-- skey  -->
+    <h2>Skew</h2>
+    <p>rotates element to in 3d</p>
+    <p>hover on box to see changes </p>
+    <div class="container">
+        <div class="skew box">Box</div>
+    </div>
+</body>
+</html>
