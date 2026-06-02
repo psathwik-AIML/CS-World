@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        h1{
+            font-size:70px;
+        }
+        .p{
+            font-size:28px;
+        }
+        .container{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:30px;
+            width:90%;
+            margin:30px auto;
+        }
+        .box{
+            border:1px solid;
+            padding:20px;
+            background-color:black;
+            text-align:center;
+            max-width:600px;
+        }
+        .box-heading{
+            font-size:30px;
+            font-weight:800;
+            color:orange;
+        }
+        .box-para{
+            font-size:20px;
+            font-weight:800;
+            color:rgb(0, 191, 255);
+            border:1px solid;
+            padding:10px 20px;
+        }
+        /* media queries  */
+        @media screen and ((min-width:1000px) and (max-width:1500px)){
+            .container{
+                grid-template-columns:1fr 1fr 1fr 1fr;
+            }
+            .box-heading{
+                font-size:28px;
+            }
+            .box-para{
+                font-size:18px;
+            }
+        }
+        @media screen and (max-width:1000px){
+            .container{
+                grid-template-columns:1fr 1fr;
+            }
+            .box-heading{
+                font-size:25px;
+            }
+            .box-para{
+                font-size:17px;
+                padding:10px;
+            }
+        }
+        @media screen and (max-width:800px){
+            .container{
+                grid-template-columns:1fr 1fr 1fr;
+            }
+            .box-heading{
+                font-size:20px;
+            }
+            .box-para{
+                font-size:15px;
+            }
+        }
+        @media screen and (max-width:500px){
+            .container{
+                grid-template-columns:1fr;
+            }
+            .box-heading{
+                font-size:20px;
+            }
+            .box-para{
+                font-size:15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Media Queries</h1>
+    <p class="p">A CSS media query is a technique introduced in CSS3 that allows content rendering to adapt to conditions such as screen resolution, device orientation, and viewport width. It serves as a cornerstone technology for responsive web design (RWD), enabling developers to build layouts that automatically adjust across desktops, tablets, and smartphones.</p>
+    <hr>
+    <div class="container">
+        <div class="box">
+            <h3 class="box-heading">Heading</h3>
+            <p class="box-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, cumque velit aspernatur nemo impedit, doloribus explicabo laudantium quam amet voluptatibus, repudiandae rerum non. Dolor voluptates sint magni odio cum veritatis!</p>
+        </div>
+        <div class="box">
+            <h3 class="box-heading">Heading</h3>
+            <p class="box-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, cumque velit aspernatur nemo impedit, doloribus explicabo laudantium quam amet voluptatibus, repudiandae rerum non. Dolor voluptates sint magni odio cum veritatis!</p>
+        </div>
+        <div class="box">
+            <h3 class="box-heading">Heading</h3>
+            <p class="box-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, cumque velit aspernatur nemo impedit, doloribus explicabo laudantium quam amet voluptatibus, repudiandae rerum non. Dolor voluptates sint magni odio cum veritatis!</p>
+        </div>
+        <div class="box">
+            <h3 class="box-heading">Heading</h3>
+            <p class="box-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, cumque velit aspernatur nemo impedit, doloribus explicabo laudantium quam amet voluptatibus, repudiandae rerum non. Dolor voluptates sint magni odio cum veritatis!</p>
+        </div>
+    </div>
+</body>
+</html>
