@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Row and Column</title>
+    <style>
+        .container1{
+            border:2px solid blue;
+            height:600px;
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+        }
+        .box{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:30px;
+            border:2px solid red;
+        }
+        .container1 .box1{
+            background-color:rgb(189, 77, 77);
+            grid-column:1/3;
+        }
+        .container1 .box2{
+            background-color:rgb(82, 193, 124);
+            grid-row:2/4;
+        }
+        .container1 .box3{
+            background-color:rgb(93, 84, 182);
+            
+        }
+        .container1 .box4{
+            background-color:rgb(184, 85, 174);
+            
+        }
+        .container1 .box5{
+            background-color:rgb(218, 204, 98);
+            grid-column:1/3;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Row</h1>
+    <hr>
+    <div class="container1">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+        <div class="box box5">Box 5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --header: orange;
+            --search: rgb(87, 199, 87);
+            --right: rgb(223, 116, 81);
+            --left: rgb(45, 173, 202);
+            --middle: purple;
+        }
+
+        .container1 {
+            border: 2px solid blue;
+            width: 700px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 6fr;
+            grid-template-areas: "h h h"
+                "s s r"
+                "l m r ";
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .container2 {
+            border: 2px solid blue;
+            width: 700px;
+            height: 500px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 6fr;
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .container1 .header {
+            background-color: var(--header);
+            grid-area: h;
+        }
+
+        .container1 .search {
+            background-color: var(--search);
+            grid-area: s;
+        }
+
+        .container1 .right {
+            background: var(--right);
+            grid-area: r;
+        }
+
+        .container1 .left {
+            background-color: var(--left);
+            grid-area: l;
+        }
+
+
+        .container1 .middle {
+            background-color: var(--middle);
+            grid-area: m;
+        }
+
+        /* 2nd code  */
+        .container2 .header {
+            background-color: var(--header);
+            grid-column:1/4;
+        }
+
+        .container2 .search {
+            background-color: var(--search);
+            grid-column:1/3;
+        }
+
+        .container2 .right {
+            background: var(--right);
+            grid-row:2/4;
+            grid-column:3/4;
+        }
+
+        .container2 .left {
+            background-color: var(--left);
+            grid-column:1/2;
+        }
+
+
+        .container2 .middle {
+            background-color: var(--middle);
+            grid-column:2/3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Project 3</h1>
+    <br>
+    <hr>
+    <br><br>
+    <!-- method 1  -->
+    <h2>method 1
+    </h2 >
+        <div class="container1">
+            <div class="box header">Header</div>
+            <div class="box search">search</div>
+            <div class="box right">right</div>
+            <div class="box left">left</div>
+            <div class="box middle">middle</div>
+        </div>
+        <br>
+        <hr>
+        <br><br>
+        <!-- method 1  -->
+        <h2>method 2
+        </h2 >
+            <div class="container2">
+                <div class="box header">Header</div>
+                <div class="box search">search</div>
+                <div class="box right">right</div>
+                <div class="box left">left</div>
+                <div class="box middle">middle</div>
+            </div>
+</body>
+
+</html>

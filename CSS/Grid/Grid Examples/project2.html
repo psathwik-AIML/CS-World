@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: rgb(215, 109, 71);
+        }
+
+        .container1 {
+            border: 2px solid blue;
+            width: 700px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr 3fr 1fr;
+            grid-template-areas: "h h h h"
+                                 "n1 n2 n3 a"
+                                 "c c c a"
+                                 "f f f f";
+            gap:20px;
+            padding: 20px;
+        }
+
+        .container2 {
+            border: 2px solid blue;
+            width: 700px;
+            height: 500px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr 3fr 1fr;
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .container1 .header {
+            background-color: var(--bg);
+            grid-area: h;
+        }
+
+        .container1 .smallbox1 {
+            background-color: var(--bg);
+            grid-area: n1;
+        }
+        .container1 .smallbox2 {
+            background-color: var(--bg);
+            grid-area: n2;
+        }
+        .container1 .smallbox3 {
+            background-color: var(--bg);
+            grid-area: n3;
+        }
+
+        .container1 .content {
+            background: var(--bg);
+            grid-area: c;
+        }
+
+        .container1 .aside {
+            background-color: var(--bg);
+            grid-area: a;
+        }
+
+        .container1 .footer {
+            background-color: var(--bg);
+            grid-area: f;
+        }
+
+
+        /* 2nd code  */
+        .container2 .header {
+            background-color: var(--bg);
+            grid-column: 1/5;
+            grid-column: 1/5;
+        }
+
+        .container2 .smallbox1 {
+            background-color: var(--bg);
+        }
+        .container2 .smallbox2 {
+            background-color: var(--bg);
+        }
+        .container2 .smallbox3 {
+            background-color: var(--bg);
+        }
+
+        .container2 .content {
+            background-color: var(--bg);
+            grid-column:1/4;
+        }
+
+        .container2 .aside {
+            background-color: var(--bg);
+            grid-column:4/5;
+            grid-row:2/4;
+        }
+
+        .container2 .footer {
+            background-color: var(--bg);
+            grid-column: 1/5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Project 2</h1>
+    <br>
+    <hr>
+    <br><br>
+    <!-- method 1  -->
+    <h2>method 1
+        <h2 />
+        <div class="container1">
+            <div class="box header">Header</div>
+            <div class="box smallbox1">smallbox 1</div>
+            <div class="box smallbox2">smallbox 2</div>
+            <div class="box smallbox3">smallbox 3</div>
+            <div class="box content">Content</div>
+            <div class="box aside">Aside</div>
+            <div class="box footer">Footer</div>
+        </div>
+        <br>
+        <hr>
+        <br><br>
+        <!-- method 1  -->
+        <h2>method 2
+            <h2 />
+            <div class="container2">
+                 <div class="box header">Header</div>
+            <div class="box smallbox1">smallbox 1</div>
+            <div class="box smallbox2">smallbox 2</div>
+            <div class="box smallbox3">smallbox 3</div>
+            <div class="box content">Content</div>
+            <div class="box aside">Aside</div>
+            <div class="box footer">Footer</div>
+            </div>
+</body>
+
+</html>
