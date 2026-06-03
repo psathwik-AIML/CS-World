@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container{
+            border:2px solid blue;
+            width:500px;
+            height:500px;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:30px;
+            margin:10px;
+        }
+        .box1{
+            background-color:rgb(214, 79, 42);
+            animation:animate-box1 3s infinite alternate;
+        }
+        .box2{
+            background-color:rgb(62, 214, 118);
+            animation:animate-box2 1s infinite alternate;
+        }
+        @keyframes animate-box1{
+            from{
+            }
+            to{
+                transform:translateX(300px);
+            }
+        }
+        @keyframes animate-box2{
+            from{
+            }
+            to{
+                transform:translateY(240px);
+                border-radius:50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animations</h1>
+    <p>A CSS animation is a technique that changes the appearance and behavior of HTML elements over time without using
+        JavaScript. It allows properties (like colors, sizes, or positions) to smoothly transition through multiple
+        states using a dedicated timeline</p>
+    <hr>
+    <div class="container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+    </div>
+</body>
+
+</html>
