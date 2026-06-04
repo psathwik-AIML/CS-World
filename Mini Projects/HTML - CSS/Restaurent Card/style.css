@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:rgb(17, 46, 61);
+    color:black;
+}
+h1{
+    color:gold;
+    font-size:40px;
+    text-align:center;
+    margin-top:10px;
+}
+.restaurent-container{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+}
+.restaurent-card{
+    width:350px;
+    background-color:beige;
+    border-radius:10px;
+    box-shadow:10px 10px 40px rgba(21, 18, 18, 0.666);
+}
+.restaurent-card img{
+    width:100%;
+    height:200px;
+    border-radius:10px 10px 0 0;
+}
+.group{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    margin:5px;
+}
+.food-name{
+    font-weight:700;
+}
+.food-rating{
+    background-color:rgb(28, 174, 28);
+    padding:0 5px;
+    color:#fff;
+}
+.food-location{
+    color:rgb(57, 54, 54)
+}
