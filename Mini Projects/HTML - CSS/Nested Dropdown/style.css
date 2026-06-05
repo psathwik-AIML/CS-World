@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.navbar {
+    background-color: rgb(35, 33, 33);
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-li {
+    position: relative;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-li:hover {
+    background-color: rgb(80, 79, 79);
+}
+
+/* First dropdown */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    list-style: none;
+    background-color: rgb(53, 52, 52);
+}
+
+.menu-li:hover > .sub-menu {
+    display: block;
+}
+
+.sub-menu-li {
+    position: relative;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.sub-menu-li:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+/* Nested dropdown */
+.sub-menu-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 150px;
+    list-style: none;
+    background-color: rgb(83, 81, 81);
+}
+
+.sub-menu-li:hover > .sub-menu-menu {
+    display: block;
+}
+
+.sub-menu-menu li {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.sub-menu-menu li:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+/* Icon spacing */
+.fa-angle-down,
+.fa-angle-right {
+    margin-left: 6px;
+}
