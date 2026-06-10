@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <style>
+        body{
+            font-family:sans-serif;
+        }
+        h1{
+            text-align:center;
+        }
+        dt{
+            font-weight:600;
+            color:orange;
+        }
+        dd{
+            margin-bottom:30px;
+        }
+        dd{
+            color:skyblue
+        }
+        span{
+            color:gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Types</h1>
+    <p>the data is of different types</p>
+    <p>java script is dynamical language means data type is deccided automatic</p>
+    <p><span> type of()  </span> is used to know data type of a variable</p>
+    <hr>
+    <h3>Types:</h3>
+    <dl>
+        <!-- primitive data types  -->
+        <dt>Number:</dt>
+        <dd>numerical values and decimals are stored</dd>
+        <dt>String:</dt>
+        <dd>sequence of characters  are stored</dd>
+        <dt>Boolean:</dt>
+        <dd>only true and false are stored</dd>
+        <!-- special data types -->
+         <dt>Null:</dt>
+         <dd>null means no data </dd>
+         <dt>Undefined:</dt>
+         <dd>undefined means variable declared but not intialized </dd>
+         <!-- composite data types  -->
+          <dt>Arrays</dt>
+          <dd>used to store multiple values </dd>
+          <dt>Objects</dt>
+          <dd>data stored in key value pairs</dd>
+    </dl>
+</body>
+<script>
+    // number 
+    let num1=32
+    console.log(num1);
+    console.log(typeof(num1));
+    // string 
+    let name="ironman"
+    console.log(name);
+    console.log(typeof(name));
+    // boolean 
+    let married=false
+    console.log(married);
+    console.log(typeof(married));
+    // null 
+    let has_land=null
+    console.log(has_land);
+    console.log(typeof(has_land));
+    // undefined 
+    let age;
+    console.log(age);
+    console.log(typeof(age));
+    // arrays 
+    let names=["jasmine","priya","raju","edward"]
+    console.log(names);
+    console.log(typeof(names));
+    // objects 
+    let obj={
+        student:"steve",
+        age:31,
+        coder:true
+    }
+    console.log(obj);
+    console.log(typeof(obj));
+
+</script>
+</html>
