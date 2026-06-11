@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            color: orangered;
+        }
+
+        .info {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Loops</h1>
+    <p>for using repetative code we use the loops</p>
+    <hr>
+    <h2>Types</h2>
+    <!-- for loop  -->
+    <h3>For Loop</h3>
+    <p class="info">it used when we know number of iterations</p>
+    <!-- while loop  -->
+    <h3>While Loop</h3>
+    <p class="info">it used when we dont know number of iterations</p>
+    <!-- do while loop  -->
+    <h3>Do While Loop</h3>
+    <p class="info">it is same as while loop but runs once even if condition is false</p>
+    <!-- for in loop  -->
+    <h3>For In Loop</h3>
+    <p class="info">it used when we need index and iteratable data one by one </p>
+    <!-- for of loop  -->
+    <h3>For Of Loop</h3>
+    <p class="info">it used when we need only iteratable (array or objects) data one by one </p>
+    <hr>
+    <!-- java script  -->
+    <script>
+        //  for loop 
+        console.log("for loop:")
+        for (let i = 1; i <= 5; i++) {
+            console.log(i)
+        }
+        console.log("........................")
+        //  while loop 
+        console.log("while loop:")
+        // let day=prompt("Enter number from 1 to 5")
+        // while(day!="3"){
+        //     day=prompt("again")
+        // }
+        console.log("correct answer")
+        console.log("........................")
+        // do while loop
+        console.log("do while loop:")
+        let a = 1
+        do {
+            console.log("iam do while loop", a)
+            a++;
+
+        }
+        while (a > 10)
+        console.log("........................")
+        // for in loop  
+        console.log("for in loop:")
+        let student = {
+            name: "rocky",
+            age: 31,
+            height: 6.2,
+            city: "mumbai"
+        }
+        for (let index in student) {
+            console.log(`${index}: ${student[index]}`)
+        }
+        console.log("........................")
+        // for of loop 
+         console.log("for of loop:")
+         let fruits=["apple","banana","mango","grapes","kiwi"]
+         for(let fruit of fruits){
+            console.log(fruit)
+         }
+    </script>
+</body>
+
+</html>
