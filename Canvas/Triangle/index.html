@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+    <!-- css code  -->
+    <style>
+        #board {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="board" width="600" height="400"></canvas>
+    <!-- java script code  -->
+    <script>
+        let board = document.getElementById("board")
+        let ctx = board.getContext("2d")
+        let w = board.width;
+        let h = board.height;
+        // console.log(ctx);
+        // fill color 
+        ctx.fillStyle = "orange"
+        // stroke color 
+        ctx.strokeStyle = "lime"
+        // width of line 
+        ctx.lineWidth = 3
+
+        // triangle 
+       function drawTriangle() {
+            ctx.beginPath()
+            ctx.moveTo(100, 200)
+            ctx.lineTo(200, 200)
+            ctx.lineTo(150, 100)
+            ctx.closePath()
+            ctx.stroke()
+            ctx.beginPath()
+            ctx.strokeStyle = "#a0fbb0"
+            // point 1
+            ctx.moveTo(300, 200)
+            // point 2
+            ctx.lineTo(400, 200)
+            // point 3
+            ctx.lineTo(350, 100)
+            // point 4 
+            ctx.closePath()
+            ctx.stroke()
+            ctx.beginPath()
+            ctx.strokeStyle = "red"
+            // point 1 
+            ctx.moveTo(300, 205)
+            // point 2
+            ctx.lineTo(400, 205)
+            // point 3
+            ctx.lineTo(350, 310)
+            // point 4 
+            ctx.closePath()
+            ctx.stroke()
+        }
+
+        drawTriangle()
+    </script>
+</body>
+
+</html>
