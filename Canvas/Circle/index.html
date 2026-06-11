@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle</title>
+    <!-- css code  -->
+    <style>
+        #board {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="board" width="600" height="400"></canvas>
+    <!-- java script code  -->
+    <script>
+        let board = document.getElementById("board")
+        let ctx = board.getContext("2d")
+        let w = board.width;
+        let h = board.height;
+        // console.log(ctx);
+        // fill color 
+        ctx.fillStyle = "orange"
+        // stroke color 
+        ctx.strokeStyle = "lime"
+        // width of line 
+        ctx.lineWidth = 3
+
+        // circle 
+        function drawCircle() {
+            // circle 1 
+            ctx.beginPath()
+            ctx.strokeStyle = "maroon"
+            ctx.arc(300, 200, 100, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "indigo"
+            ctx.arc(300, 200, 90, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 3
+            ctx.beginPath()
+            ctx.strokeStyle = "green"
+            ctx.arc(300, 200, 80, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "gold"
+            ctx.arc(300, 200, 70, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "pink"
+            ctx.arc(300, 200, 60, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "dodgerblue"
+            ctx.arc(300, 200, 50, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "lime"
+            ctx.arc(300, 200, 40, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "orangered"
+            ctx.arc(300, 200, 30, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "purple"
+            ctx.arc(300, 200, 20, 0, Math.PI * 2)
+            ctx.stroke()
+            // circle 2 
+            ctx.beginPath()
+            ctx.strokeStyle = "yellow"
+            ctx.arc(300, 200, 10, 0, Math.PI * 2)
+            ctx.stroke()
+        }
+
+        drawCircle()
+    </script>
+</body>
+
+</html>
