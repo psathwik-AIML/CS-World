@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>console</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        span{
+            color:gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>console object</h1>
+    <p>console is used for debugging,testing,practice </p>
+    <p>mainly used during development</p>
+    <p>every tab has its related console</p>
+    <p>open console  with <span>ctrl + shift + i</span></p>
+    <img src="./console-methods.png" alt="console-methods" width="300">
+    <hr>
+    <h2>Java script codes</h2>
+    <script>
+        // log 
+        //used for debugging 
+        console.log("Hello World")
+
+        // info 
+        // to show the information for client 
+        console.info("Information")
+
+        // warn 
+        // to show warning basically its background is orange 
+        console.warn("warning")
+
+        // error 
+        // to show error background is red 
+        console.error("error occured")
+        
+        // table 
+        // to show data in tabular for arrays and objects 
+        // array 
+        let array=["mango","carrot","biryani","laddu"]
+        console.table(array)
+        // object
+        let obj={
+            name:"student",
+            age:21,
+            marks:300
+        }
+        console.table(obj)
+
+        // clear 
+        // to clear all console 
+        console.clear()
+
+        // assert 
+        // it shows when it is false according to condition 
+        console.assert(3>5,"wrong answer")
+
+        // count  
+        // it helps in how many times code has run 
+        let input=1
+        while(input<=5){
+            console.count("loop-runs")
+            input++;
+        }
+
+        // count reset 
+        // it helps to make count reset 
+        console.countReset("loop-runs")
+        console.log('.............')
+        console.count("loop-runs")
+
+        // time  and time end 
+        // it help us to check how much time code taken 
+        let i=1;
+        console.time("time")
+        while(i<=10){
+            i++;
+        }
+        console.timeEnd("time")
+
+        // time log 
+        // checks time in between 
+        let x=1;
+        console.time("track")
+        console.log("....................")
+        while(x<=10){
+            x++;
+            console.timeLog("track")
+        }
+        console.log("....................")
+        console.timeEnd("track")
+
+        // group and groupend
+        // these both used to group items together 
+        console.group("group-1")
+        console.log("apple")
+        console.log("banana")
+        console.log("guava")
+        console.log("mango")
+        console.groupEnd("group-1")
+
+        console.group("group-2")
+        for(let i=1;i<=5;i++){
+            console.count("loop-count")
+            console.log(i)
+        }
+        console.groupEnd("group-2")
+    </script>
+</body>
+</html>
