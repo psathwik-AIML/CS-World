@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <!-- css code  -->
+     <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        .js{
+            color:orange;
+        }
+        h3,li{
+            color:dodgerblue;
+            text-transform:capitalize;
+        }
+        .p{
+            color:purple
+        }
+     </style>
+</head>
+<body>
+    <h1>Objects</h1>
+    <p>objects are real world entities</p>
+    <p>collection of elements they are properties and methods</p>
+    <h2>Types:</h2>
+    <ul>
+        <li>object literal</li>
+        <li>object with new operator with constructor </li>
+        <li>object with new operator with constructor function</li>
+        <li>object create</li>
+    </ul>
+    <hr>
+    <!-- java script code  -->
+    <script>
+        document.write(`<h2 class="js">Java Script Codes</h2>`)
+        // object literal
+        document.write(`<h3>object literal:</h3>`)
+        let object_literal={
+            name:"steve",
+            age:31,
+            coder:true
+        }
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(object_literal)
+
+        // object with new operator with constructor
+        document.write(`<h3>object with new operator with constructor:</h3>`)
+        let object_constructor=new Object()
+        object_constructor.name="coder"
+        object_constructor.phone=90909090
+        object_constructor.chill=true
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(object_constructor)
+        // object with new operator with constructor function
+        document.write(`<h3>object with new operator with constructor function:</h3>`)
+
+        function object_function(hero,power,fit){
+            this.hero=hero
+            this.power=power
+            this.fit=fit
+        }
+        let obj_1=new object_function("thor","hammer",true)
+        let obj_2=new object_function("captain","shield",true)
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(obj_1)
+        console.log(obj_2)
+
+         // object create
+        document.write(`<h3>object create:</h3>`)
+        let object_create=Object.create(obj_2,{
+            name:{
+                value:"hulk"
+            },
+            fit:{
+                value:"false"
+            },
+            power:{
+                value:"gamma"
+            }
+        })
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(object_create)
+    </script>
+</body>
+</html>
