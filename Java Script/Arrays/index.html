@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        body{
+            padding:0 40px;
+        }
+        h1{
+            text-align:center;
+        }
+        h2{
+            color:orange;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <p>arrays are used store multiple data in a single variable</p>
+    <p>for accesing we use indexes</p>
+    <hr>
+    <h2>Java Script Code Outputs</h2>
+    <script>
+        // array creation in two ways 
+        // way 1
+        let movies=["iron-man","hulk","spider-man","captain-america"]
+        // way 2 
+        let plants=new Array("rose","hibiscus","lemon")
+         document.write("<h3>printing ....</h3>")
+        // printing array  1
+        document.write(movies+"<br>")
+        // printing array 2 
+        document.write(plants+"<br>")
+        // accesing array elements by using index 
+        document.write(`first element: ${plants[0]}<br>`)
+        // methods on array 
+        document.write("<h3>Methods of array</h3>")
+        let fruits=["apple","banana","custard-apple"]
+        document.write(`original array: ${fruits} <br>`)
+        // push 
+        document.write("<h3>push</h3>")
+        // push method add elements from last of array 
+        fruits.push("grapes")
+        fruits.push("guava")
+        document.write(`after push array: ${fruits} <br>`)
+        // pop
+        document.write("<h3>pop</h3>")
+        // pop method removes elements from last of array 
+        fruits.pop()
+        document.write(`after pop array: ${fruits} <br>`)
+        // unshift (opposite to push)
+        document.write("<h3>unshift</h3>")
+        // unshift method add elements from first of array 
+        fruits.unshift("orange")
+        fruits.unshift("pine-apple")
+        document.write(`after unshift array: ${fruits} <br>`)
+        // shift (opposite to pop)
+        document.write("<h3>shift</h3>")
+        // shift method removes elements from first of array 
+        fruits.shift()
+        document.write(`after shift array: ${fruits} <br>`)
+        // index of 
+        document.write("<h3>index of</h3>")
+        // index of  method used for knowing index of element in array
+        let index=fruits.indexOf("banana")
+        document.write(` index of method: ${index} <br>`)
+        //  slice 
+        document.write("<h3>slice</h3>")
+        //for getting some part of array
+        let somePart=fruits.slice(2,5)
+        document.write(` slice: ${somePart} <br>`)
+        //  length
+        document.write("<h3>length</h3>")
+        //to know array size
+        let size=fruits.length
+        document.write(` length: ${size} <br>`)
+    </script>
+</body>
+</html>
