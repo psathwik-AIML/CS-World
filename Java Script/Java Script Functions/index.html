@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        body{
+            padding:0 30px;
+        }
+        h1{
+            text-align:center;
+        }
+        .js{
+            color:orange
+        }
+        li{
+            text-transform:capitalize;
+        }
+        h3{
+            text-transform:capitalize;
+            color:dodgerblue
+        }
+    </style>
+</head>
+<body>
+    <h1>Functions</h1>
+    <p>functions are block of code used for repetating </p>
+    <p>only once we can create function and use at multiple places in our project</p>
+    <h2>Types:</h2>
+    <ol>
+        <li>named function</li>
+        <li>anonymous function</li>
+        <li>IIFE function</li>
+        <li>arrow function</li>
+    </ol>
+    <hr>
+    <h2 class="js">Java Script Output Codes </h2>
+    <script>
+        // named function 
+        document.write(`<h3>Named function</h3>`)
+        function named(){
+            document.write(`Iam named function`)
+        }
+        named()
+        // anonymous function 
+        // no name for function 
+        document.write(`<h3>anonymous function</h3>`)
+        let anonymous=function(){
+            document.write(`Iam anonymous function`)
+        }
+        anonymous()
+        // IIFE function 
+        // no reuse possible and wrapped in paranthesis
+        document.write(`<h3>IIFE function (Immediately Invoked Function Expression)</h3>`);
+        (function(){
+            document.write(`Iam IIFE function`)
+        })()
+        // arrow function 
+        document.write(`<h3>arrow function (Immediately Invoked Function Expression)</h3>`)
+        let arrow=()=>{
+            document.write(`Iam Arrow function`)
+        }
+        arrow()
+    </script>
+</body>
+</html>
