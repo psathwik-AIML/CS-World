@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom selection</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        .p{
+            color:purple;
+        }
+        h3{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dom selection</h1>
+    <p>inorder to manipulate we need to access elements <br>
+    document is object so it has properties and methods</p>
+    <div class="special">
+        <h4>paragraphs:</h4>
+        <p class="para" id="one">paragraph - 1</p>
+        <p class="para">paragraph - 2</p>
+        <p class="para-4">paragraph - 3</p>
+    </div>
+    <hr>
+    <!-- js code  -->
+     <h2>methods to select html elements</h2>
+    <script>
+        // id selector
+        document.write("<h3>id selector:</h3>")
+        let id_selector=document.getElementById("one")
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(id_selector)
+        console.log("...................")
+        // class selector
+        document.write("<h3>class selector:</h3>")
+        let class_selector=document.getElementsByClassName("para")
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(class_selector)
+        console.log("...................")
+        // tag selector
+        document.write("<h3>tag selector:</h3>")
+        let tag_selector=document.getElementsByTagName("p")
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(tag_selector)
+        console.log("...................")
+        // query selector
+        document.write("<h3>query selector:</h3>")
+        let query_selector=document.querySelector(".special")
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(query_selector)
+        console.log("...................")
+        // query selector all
+        document.write("<h3>query selector all:</h3>")
+        let query_selector_all=document.querySelectorAll(".para")
+        document.write(`<p class="p">open console to see output</p>`)
+        console.log(query_selector_all)
+        console.log("...................")
+    </script>
+</body>
+</html>
