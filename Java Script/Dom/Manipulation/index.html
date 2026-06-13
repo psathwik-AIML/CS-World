@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        h3{
+            color:orange;
+        }
+        .p{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dom Manipulation</h1>
+    <pre>dom manipulation means to make changes in dom like creating adding removing replacing etc..</pre>
+    <!-- example  -->
+     <div id="first">
+        <p class="para-1">para 1</p>
+        <p class="para-2" id="two">para 2</p>
+        <p class="para-3">para 3</p>
+     </div>
+    <hr>
+    <h2>Java Script code</h2>
+    <script>
+        // creation of element 
+        document.write("<h3>creation of element</h3>")
+        let new_para=document.createElement("p")
+        document.write(' <p class="p">open console to see output</p>')
+        console.log(new_para);
+        console.log("...................");
+        // content for  element 
+        document.write("<h3>content for element</h3>")
+        new_para.innerText="para 4"
+        document.write(' <p class="p">open console to see output</p>')
+        console.log(new_para);
+        console.log("...................");
+        // append  element to dom
+        document.write("<h3>append element</h3>")
+        let parent=document.getElementById("first")
+        parent.appendChild(new_para)
+        document.write(' <p class="p">open console to see output</p>')
+        console.log("...................");
+        // insert element before another element
+        document.write("<h3>insert element before another element</h3>")
+         let special_para=document.createElement("p")
+        special_para.innerText="special para"
+        let para3=document.querySelector(".para-3")
+        parent.insertBefore(special_para,para3)
+        document.write(' <p class="p">open console to see output</p>')
+        console.log("...................");
+        // remove element 
+        document.write("<h3>remove element </h3>")
+        let two=document.getElementById("two")
+        two.remove()
+        document.write(' <p class="p">open console to see output</p>')
+        console.log("...................");
+        // remove child element 
+        document.write("<h3>remove child element </h3>")
+        parent.removeChild(para3)
+        document.write(' <p class="p">open console to see output</p>')
+        console.log("...................");
+        // replace  element 
+        document.write("<h3>replace  element </h3>")
+        let h4=document.createElement("h4")
+        h4.innerText="i am heading 3"
+        parent.replaceChildren(h4,para3)
+        document.write(' <p class="p">open console to see output</p>')
+        console.log("...................");
+    </script>
+</body>
+</html>
