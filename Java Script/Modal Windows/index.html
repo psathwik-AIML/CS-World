@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Windows</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        .p{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modal Windows</h1>
+    <p>modal window is a window on webpage. <br>
+    if we close modal window then only web page will become interactive</p>
+    <p>there are 3 pre built modal windows <br>
+    they are: <br></p>
+    <dl>
+        <dt>alert:</dt>
+        <dd>to display message to user</dd>
+        <dt>prompt:</dt>
+        <dd>to take input from user.takes two arguments 1 is message and 2 is default value</dd>
+        <dt>confirm:</dt>
+        <dd>to get confirmation from user</dd>
+    </dl>
+    <hr>
+    <!-- js code  -->
+    <script>
+        document.write('<p class="p">open console to see output</p>')
+
+        // alert 
+        alert("Hello, Iam Alert Box")
+        // prompt 
+        let age=prompt("Iam prompt box,Enter u r age",18)
+        console.log(age);
+        // confirm 
+        let confirmBox=confirm("Iam confirm Box,are u sure ")
+        console.log(confirmBox);
+     </script>
+</body>
+</html>
