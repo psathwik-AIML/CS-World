@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Styling</title>
+    <style>
+        body {
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            color: orange;
+            text-transform: capitalize;
+        }
+
+        .p {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dom Styling</h1>
+    <p>dom styling with the help java script code</p>
+    <div class="special">
+        <p id="one">para 1</p>
+        <p>para 2</p>
+        <img src="./bird.jpg" alt="">
+    </div>
+    <hr>
+    <h2>Java Script code</h2>
+    <!-- js code  -->
+    <script>
+        let para = document.getElementById('one')
+        // styling 
+        document.write("<h3>dom styling:</h3>")
+        document.write("<p class='p'>open console to see output</p>")
+        console.log(para)
+        para.style.backgroundColor = "dodgerblue"
+        // styling image from js 
+        let image = document.querySelector("img")
+        image.style.width = "100px"
+        console.log(".................")
+
+        // get attribute
+        document.write("<h3>Get Attribute:</h3>")
+        document.write("<p>to get attribute value from html</p>")
+        document.write("<p class='p'>open console to see output</p>")
+        let path = image.getAttribute("src")
+        console.log(path);
+        console.log(".................")
+        // set attribute
+        document.write("<h3>set Attribute:</h3>")
+        document.write("<p>to set attribute to  html elements</p>")
+        document.write("<p class='p'>open console to see output</p>")
+        console.log(`before: ${image.src}`);
+        image.setAttribute('src',"./fish.jpg")
+        console.log(`after: ${image.src}`);
+        console.log(".................")
+        // class list
+        document.write("<h3>class list Attribute:</h3>")
+        document.write("<p>to add class to existing clases. set attribute is for replacing</p>")
+        document.write("<p class='p'>open console to see output</p>")
+        para.classList.add("two")
+        para.classList.add("three")
+        para.classList.remove("three")
+        console.log("para: ",para);
+
+    </script>
+</body>
+
+</html>
