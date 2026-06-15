@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Set Timeout</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        .p{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Set Timeout</h1>
+    <p>after some time code will run </p>
+    <p>clear interval is to delete timer</p>
+    <p>1 second = 1000 milli seconds</p>
+    <p>it will not block next line codes</p>
+    <hr>
+    <!-- js code  -->
+     <h2>Java Script Code</h2>
+    <script>
+        document.write("<p class='p'>open console to see output</p>")
+
+        // set time out 
+        let timer=setTimeout(()=>{
+            alert("sample test")
+        },4000)
+
+        for(let i=1;i<=4;i++){
+            console.log(i);
+        }
+
+    </script>
+</body>
+</html>
