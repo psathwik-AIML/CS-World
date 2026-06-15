@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Set Interval</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        .p{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Set Interval</h1>
+    <p>code runs in interval given</p>
+    <p>clear interval delete timer</p>
+    <hr>
+    <!-- js code  -->
+     <h2>Java Script Code</h2>
+    <script>
+        document.write("<p class='p'>open console to see output</p>")
+
+        // set interval 
+        let counter=1;
+        let timer=setInterval(()=>{
+            console.log(counter)
+            counter++;
+            if(counter==3){
+                clearInterval(timer)
+            }
+        },2000)
+
+        console.log("hello");
+        
+    </script>
+</body>
+</html>
