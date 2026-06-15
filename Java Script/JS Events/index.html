@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Events</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        .p{
+            color:purple;
+        }
+        button{
+            background-color:palegreen;
+            outline:0;
+            border:0;
+            padding:6px;
+            cursor: pointer;
+            color:black;
+        }
+        input{
+            padding:10px;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events</h1>
+    <p>events mean action done by user</p>
+    <p><b>event handling: </b> what should do after some action</p>
+    <p><b>event listeners:</b> they track actions</p>
+    <h3>Types:</h3>
+    <dl>
+        <dt>inline events:</dt>
+        <dd>code in html</dd>
+        <dt> event properties:</dt>
+        <dd>code in js</dd>
+        <dt>add  event listener:</dt>
+        <dd>code in js special method</dd>
+    </dl>
+    <div id="special">
+        <p>para 1</p>
+        <button id="btn" onclick='console.log("iam buttom")''>Click me</button> <br><br>
+        <button id="btn2" title="click on me to change color">sample</button> <br><br>
+        Name: <input type="text" placeholder="Enter Name">
+    </div>
+    <hr>
+    <!-- js code  -->
+     <h2>Java Script Code</h2>
+    <script>
+        document.write("<p class='p'>open console to see output</p>")
+        
+        let button=document.getElementById("btn");
+        let btn=document.getElementById("btn2");
+        let input=document.querySelector("input");
+        // event properties 
+        input.onfocus=changeInputColor
+        function changeInputColor(){
+            input.style.backgroundColor="beige"
+        }
+        // event listener method
+        btn.addEventListener('click',randomColor)
+
+        // function to get random color 
+        function randomColor(){
+            let letters="0123456789abcdef"
+            let color="#";
+            for(let i=0;i<6;i++){
+                let symbol=Math.floor(Math.random()*letters.length)
+                color=color+letters[symbol]
+            }
+            document.body.style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>
