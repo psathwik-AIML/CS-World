@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        .p{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spread Operator </h1>
+    <p>iterable object is taken as input and elements are expanded or separated individual</p>
+    <hr>
+    <h2>Js code </h2>
+    <p class="p">open console to see output</p>
+    <script>
+        let numbers=[1,2,3,4]
+        console.log(numbers);
+        // spread 
+        let newArray=[...numbers,5,6,7,8]
+        console.log(newArray);
+    </script>
+</body>
+</html>
