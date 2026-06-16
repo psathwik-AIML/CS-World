@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            text-align:center;
+        }
+        dl{
+            background-color:rgb(27, 69, 54);
+            padding:10px;
+        }
+        .p{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <p>methods applied on arrays to make code flexible</p>
+    <dl>
+        <dt>map method:</dt>
+        <dd>after doing some operation on elements of array it will return new array</dd>
+        <dt>filter method:</dt>
+        <dd>after doing filter on elements of array it will return new array with true condition only</dd>
+        <dt>reduce method:</dt>
+        <dd>after doing reduce  on elements of array it will return only single </dd>
+        <dt>find method:</dt>
+        <dd>first element true then returns </dd>
+        <dt>some method:</dt>
+        <dd>same like find but returns true or false not element</dd>
+        <dt>every method:</dt>
+        <dd>return true if all elements call back function return true</dd>
+    </dl>
+    <hr>
+    <h2>Java Script code</h2>
+    <!-- js code  -->
+     <script>
+         document.write("<p class='p'>open console to see output</p>")
+
+         let numbers=[1,2,3,4,30,6,7,8,9,10]
+         //  map method 
+         let even=numbers.map((each)=>{
+            let num=each%2
+            return num==0?each:0
+         })
+         console.log("map method:")
+         console.log(even);
+         console.log(".................")
+         //  filter method 
+         let fourTable=numbers.filter((each)=>{
+            return each%4==0
+         })
+         console.log("filter method:")
+         console.log(fourTable);
+         console.log(".................")
+         //  reduce method 
+        //  it takes two arguments one is function two is accumulate default value 
+         let max=numbers.reduce((accumulateValue,each)=>{
+            if(accumulateValue>each){
+                return accumulateValue
+            }
+            else{
+                return each
+            }
+         },numbers[0])
+         console.log("reduce method:")
+         console.log(max);
+         console.log(".................")
+        //  find method 
+        let cities=["delhi","varanasi","hyderabad","vizag","mumbai","chennai","vijayawada"]
+
+        let city=cities.find((each)=>{
+            return each.startsWith("v")
+        })
+         console.log("find method:")
+         console.log(city);
+         console.log(".................")
+        //  some method 
+        let cityName=cities.some((each)=>{
+            return each.startsWith("h")
+        })
+         console.log("some method:")
+         console.log(cityName);
+         console.log(".................")
+        //  every  method 
+        let cityNames=cities.every((each)=>{
+            return each.startsWith("h")
+        })
+         console.log("every method:")
+         console.log(cityNames);
+         console.log(".................")
+     </script>
+</body>
+</html>
