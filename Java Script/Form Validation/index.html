@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Form Validation</title>
+    <!-- google font icons  -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=all" />
+    <!-- css code  -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <p>to check details entered by the user in the form correct or not by keeping some conditions </p>
+    <hr>
+    <div class="container">
+        <div class="header">
+            <h2>Register Form</h2>
+        </div>
+        <form action="./form.html" class="form" target="_blank">
+            <!-- user name -->
+            <div class="field">
+                <label for="">user name</label>
+                <input type="text" id="username">
+                <span class="material-symbols-outlined correct">
+                    check_circle
+                </span>
+                <span class="material-symbols-outlined wrong">
+                    error
+                </span>
+                <small>error message!</small>
+            </div>
+            <!-- email -->
+            <div class="field">
+                <label for="">email </label>
+                <input type="email" id="email">
+                <span class="material-symbols-outlined correct">
+                    check_circle
+                </span>
+                <span class="material-symbols-outlined wrong">
+                    error
+                </span>
+                <small>error message!</small>
+            </div>
+            <!-- password-->
+            <div class="field">
+                <label for="">password </label>
+                <input type="password" id="password">
+                <span class="material-symbols-outlined correct">
+                    check_circle
+                </span>
+                <span class="material-symbols-outlined wrong">
+                    error
+                </span>
+                <small>error message!</small>
+            </div>
+            <!-- confirm password -->
+            <div class="field">
+                <label for="">confirm password</label>
+                <input type="password" id="cpassword">
+                <span class="material-symbols-outlined correct">
+                    check_circle
+                </span>
+                <span class="material-symbols-outlined wrong">
+                    error
+                </span>
+                <small>error message!</small>
+            </div>
+            <!-- terms and conditions-->
+            <div class="field">
+                <input type="checkbox" class="tc">
+                <label for="">i agree to terms and conditions</label>
+                 <small>error message!</small>
+            </div>
+            <!-- submit-->
+            <input type="submit" class="submit-button">
+        </form>
+    </div>
+    <!-- js code  -->
+     <script src="./script.js"></script>
+</body>
+
+</html>
