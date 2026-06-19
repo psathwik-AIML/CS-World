@@ -1,0 +1,24 @@
+h1{
+    text-align:center;
+}
+.chess-board{
+    margin:20px auto;
+    /* border:1px solid red; */
+    width:400px;
+    height:400px;
+    background:repeating-linear-gradient(
+        #fff 0,
+        #fff 40px,
+        #000 40px,
+        #000 80px
+    ),
+    repeating-linear-gradient(
+        to right,
+        #fff 0,
+        #fff 50px,
+        #000 50px,
+        #000 100px
+    )
+    ;
+    background-blend-mode:exclusion;
+}
