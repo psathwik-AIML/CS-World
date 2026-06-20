@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+    <style>
+        h1 {
+            text-align:center;
+        }
+        .p{
+            color:purple;
+        }
+        img{
+            width:400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Math Object</h1>
+    <p>it is a pre built and used for mathematical operations related</p>
+    <img src="./math-functions.png" alt="math-functions" >
+    <!-- js code  -->
+     <p class="p">open console to seee outputs</p>
+     <script>
+         console.log(Math);
+         // pi value 
+         console.info("pi value:")
+         console.log(Math.PI);
+        // sign 
+        // if number is positive then gives 1 if negative gives -1 if 0 gives 0 
+        console.info("sign:")
+        console.log(Math.sign(3))
+        // always gives positive value
+        // abs
+        console.info("abs:")
+        console.log(Math.abs(-30))
+        // sqrt
+        // square root a number
+        console.info("abs:")
+        console.log(Math.sqrt(64))
+        // power
+        // give power of a number
+        console.info("power:")
+        console.log(Math.pow(3,4))
+        // max and min
+        // give min and max from a list of numbers 
+        console.info("min and max:")
+        console.log(Math.min(1,20,3,-4,5))
+        console.log(Math.max(1,20,3,-4,5))
+        // round
+        // round off number from decimal value to nearest integer
+        console.info("round:")
+        console.log(Math.round(3.2346543216584))
+        console.log(Math.round(3.9346543216584))
+        // ceil
+        // gives round to top integer
+        console.info("ceil:")
+        console.log(Math.ceil(5.21))
+        // floor
+        // gives round to bottom integer
+        console.info("floor:")
+        console.log(Math.floor(5.21))
+        // trunc
+        // gives integer and removes decimals
+        console.info("trunc:")
+        console.log(Math.trunc(8.01))
+        // random
+        // gives random number b/w 0 to 1
+        // by using floor we can make integers 
+        console.info("random:")
+        console.log(Math.random())
+        // random number b/w 1 to 5 
+        console.log(Math.floor(Math.random()*5))
+     </script>
+</body>
+
+</html>
