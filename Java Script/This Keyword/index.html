@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            color: orange;
+        }
+
+        .p {
+            color: purple;
+        }
+
+        dl {
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        dt {
+            color: rgb(80, 201, 92);
+        }
+
+        dd {
+            color: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This Keyword</h1>
+    <p>this keyword in java script represents the object maximum</p>
+    <p>but according to placement it changes which it targets</p>
+
+    <input type="button" value="click" class="input">
+    <dl>
+        <dt>this outside function and object:</dt>
+        <dd>this represents window object (pre-built)</dd>
+        <dt>this inside function:</dt>
+        <dd>this represents window object (pre-built)</dd>
+        <dt>this inside methods(object function):</dt>
+        <dd>this represents window object (pre-built)</dd>
+        <dt>this inside event handlers:</dt>
+        <dd>this represents current element.use normal function not arrow </dd>
+        <dt>this inside function with strict mode:</dt>
+        <dd>it shows undefined if we use "use strict"</dd>
+    </dl>
+    <hr>
+    <h2>Java Script Code</h2>
+    <!-- js code  -->
+    <p class="p">open console to see outputs</p>
+    <script>
+        // outside function this 
+        console.info("outside function:")
+        var a = 100;
+        console.log(this);
+        // inside function this
+        console.info("inside function:")
+        function test() {
+            console.log(this);
+        }
+        test()
+        // inside method this
+        console.info("inside method:")
+        let abc = {
+            name: "xyz",
+            fun: () => { console.log(this) }
+        }
+        abc.fun()
+        console.info("inside event handler:")
+        console.info("click on button to see result")
+        // inside event handlers 
+        let input = document.querySelector(".input"); input.addEventListener('click', function () {
+            console.log(this);
+        })
+        console.info("inside function with  strict mode:")
+        // inside function with strict mode
+        function sampleFun(){
+            "use strict"
+            console.log(this)
+        }
+        sampleFun()
+    </script>
+</body>
+
+</html>
