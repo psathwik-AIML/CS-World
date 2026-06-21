@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Camera</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Open Camera</h1>
+    <p>record image/video/audio from user</p>
+    <p>by using input type file</p>
+    <p>maximum support for mobile</p>
+
+
+    <!-- for front camera  -->
+     
+    <!-- image  -->
+    <input type="file" capture="user" accept="image/*">
+    <!-- video -->
+    <input type="file" capture="user" accept="video/*">
+    <!-- image  -->
+    <input type="file" capture="user" accept="audio/*">
+
+    <hr>
+    <!-- for back camera  -->
+
+    <!-- image  -->
+    <input type="file" capture="environment" accept="image/*">
+    <!-- video -->
+    <input type="file" capture="environment" accept="video/*">
+    <!-- image  -->
+    <input type="file" capture="environment" accept="audio/*">
+</body>
+</html>
