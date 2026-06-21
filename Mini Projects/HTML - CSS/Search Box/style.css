@@ -1,0 +1,30 @@
+
+body{
+    background-color:#000;
+}
+h1{
+    text-align:center;
+}
+.search-box{
+    /* border:1px solid red; */
+    width:400px;
+    height:40px;
+    display:flex;
+}
+.search-box input{
+    flex:1;
+    border-right:none;
+    outline:none;
+    border:1px solid #ddd;
+    padding:5px;
+    background-color:#000;
+}
+.search-box button{
+    border:none;
+    min-width:100px;
+    background-color:dodgerblue;
+    font-size:16px;
+}
+.search-box input:focus{
+    box-shadow:0 0 0 1px dodgerblue;
+}
