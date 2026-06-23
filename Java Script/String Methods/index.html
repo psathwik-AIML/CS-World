@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        img{
+            width:400px;
+        }
+        .p{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>String Methods</h1>
+    <p>string is a object and it is collection of sequence of characters</p>
+    <img src="./methods.png" alt="">
+    <hr>
+    <h2>Java Script Code</h2>
+    <p class="p">open console to see output</p>
+    <!-- js code  -->
+     <script>
+            // 012345678910
+        let s="Java Scipt "
+        // methods 
+
+        // length 
+        // gives length
+        console.info("length:")
+        console.log(s.length)
+        // char at 
+        // gives character at particular index 
+        console.info("charAt:")
+        console.log(s.charAt(6))
+        // index of 
+        // gives index of particular character  
+        console.info("index of:")
+        console.log(s.indexOf('a'))
+        // last index of 
+        // gives last index of particular character  
+        console.info("index of:")
+        console.log(s.lastIndexOf('a'))
+        // lower case
+        // converts to lower case 
+        console.info("lower case:")
+        console.log(s.toLowerCase())
+        // upper case
+        // converts to upper case 
+        console.info("upper case:")
+        console.log(s.toUpperCase())
+        // concat
+        // combines multiple strings together 
+        let a=" programming"
+        let b=" language"
+        console.info("concat:")
+        console.log(s.concat(a,b))
+        // trim
+        // removes unwanted spaces front and back 
+        console.info("trim:")
+        console.log(a)
+        console.log(a.trim())
+        // split
+        // by some condition splits in to new array
+        let x="i love coding java script"
+        console.info("split:")
+        console.log(x.split(" "))
+        // starts with 
+        // checks starting words 
+        console.info("starts with:")
+        console.log(s.startsWith("J"))
+        // ends with 
+        // checks ending words 
+        console.info("ends with:")
+        console.log(s.endsWith("a"))
+        // slice
+        // make small parts 
+        console.info("slice:")
+        console.log(s.slice(0,8))
+        // substring
+        // sub part 
+        // -ve values not allowed 
+        console.info("substring:")
+        console.log(s.substring(0,6))
+        // substr
+        // 1st value is strating index 2nd value is how many characters  
+        console.info("substr:")
+        console.log(s.substr(0,8))
+        // includes
+        // checks word or character exists
+        console.info("includes:")
+        console.log(s.includes('J'))
+        // char code at
+        // gives ascii values
+        console.info("char code at:")
+        console.log(s.charCodeAt('J'))
+        // repeat
+        // make string repeat
+        console.info("repeat:")
+        console.log(s.repeat(4))
+        // replae
+        // replace part
+        console.info("replace:")
+        console.log(s.replace("Java","Type"))
+        // for all places use regular expression g 
+        console.log(s.replace(/a/g," code "))
+     </script>
+</body>
+</html>
