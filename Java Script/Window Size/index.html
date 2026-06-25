@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Window Properties</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        button{
+            padding:10px;
+            color:wheat;
+            background-color:#000;
+            border-radius:10px;
+            font-size:20px;
+            font-weight: 600;
+            margin:10px;
+        }
+        .open{
+            background-color:rgb(22, 62, 22);
+        }
+        .close{
+            background-color:rgb(63, 22, 22);
+        }
+        .move-to{
+            background-color:darkblue;
+        }
+        .move-by{
+            background-color:rgb(70, 25, 79);
+        }
+        .resize-to{
+            background-color:rgb(58, 57, 17);
+        }
+        .move-by{
+            background-color:rgb(70, 25, 79);
+        }
+    </style>
+</head>
+<body>
+    <h1>Window Properties</h1>
+    <button onclick="openWindow()" class="open">open window</button>
+    <button onclick="closeWindow()" class="close">close window</button>
+    <br><br>
+    <button onclick="moveTo()" class="move-to">move To</button>
+    <button onclick="moveBy()" class="move-by">move By</button>
+    <br><br>
+    <button onclick="resizeTo()" class="resize-to">resize To</button>
+    <button onclick="resizeBy()" class="resize-by">resize By</button>
+    <!-- js code  -->
+     <script>
+        let win;
+        function openWindow(){
+            win=window.open("window.html","","width=200px height=200px")
+        }
+        function closeWindow(){
+           win.close()
+        }
+        // positions 
+        function moveTo(){
+            win.moveTo(100,300)
+        }
+        function moveBy(){
+            win.moveBy(100,300)
+        }
+        // sizing
+        function resizeTo(){
+            win.resizeTo(400,300)
+        }
+        function resizeBy(){
+            win.resizeBy(200,100)
+        }
+     </script>
+</body>
+</html>
