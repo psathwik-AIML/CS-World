@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#000;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.lines{
+    display:flex;
+}
+.line{
+    width:10px;
+    height:10px;
+    background-color:orange;
+    margin:0 10px;
+    animation:span 1s infinite;
+}
+.line-2{
+    animation-delay:100ms;
+}
+.line-3{
+    animation-delay:200ms;
+}
+.line-4{
+    animation-delay:400ms;
+}
+.line-5{
+    animation-delay:500ms;
+}
+
+@keyframes span{
+    30%{
+        transform:scaleY(4);
+    }
+    60%{
+        transform:scaleY(1);
+    }
+}
