@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    background-color:#000;
+}
+.container{
+    width:60%;
+    height:50%;
+    display:grid;
+    grid-template-areas:
+    "image1 image1 image2"
+    "image1 image1 image3"
+    "image4 image5 image6";
+}
+img{
+    width:100%;
+    height:100%;
+    border:2px solid #fff;
+}
+.i-1{
+    grid-area:image1;
+}
+.i-2{
+    grid-area:image2;
+}
+.i-3{
+    grid-area:image3;
+}
+.i-4{
+    grid-area:image4;
+}
+.i-5{
+    grid-area:image5;
+}
+.i-6{
+    grid-area:image6;
+}
