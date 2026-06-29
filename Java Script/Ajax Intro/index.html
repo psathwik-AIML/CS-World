@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Basic</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        .para{
+            color:skyblue;
+            text-transform:capitalize;
+        }
+        .container{
+            border:1px solid red;
+            width:300px;
+            height:100px;
+            margin:10px auto;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        button{
+            background-color:dodgerblue;;
+            border:0;
+            padding:7px;
+            cursor:pointer;
+            border-radius:10px;
+        }
+        button:hover{
+            opacity:70%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax</h1>
+    <p class="para">Ajax - asynchronous javascript and xml</p>
+    <p class="para">ajax is a concept that helps in exchanging data b/w server and browser with out refreshing web page</p>
+    <hr>
+    <div class="container"></div>
+    <button>click me</button>
+    <hr>
+    <!-- js code  -->
+     <script>
+        // getting button 
+        let button=document.querySelector("button")
+        // getting container 
+        let container=document.querySelector(".container")
+        // for using ajax we have inbuilt object xmlhttprequest 
+        let xhl=new XMLHttpRequest()
+        
+        button.addEventListener('click',loadData)
+        function loadData(){
+            // open  is used to create request 
+            // takes 5 arguments 
+            // 1.method 
+            // 2.url 
+            // 3.async (boolean value) 
+            // 4.user name 
+            // 5.password
+            xhl.open('GET','test.txt',true)
+            
+            xhl.send()
+            xhl.onprogress=()=>{
+                container.innerHTML="hello"
+            }
+            
+            xhl.onload=()=>{
+                container.innerHTML=xhl.responseText
+            }
+        }
+     </script>
+</body>
+</html>
