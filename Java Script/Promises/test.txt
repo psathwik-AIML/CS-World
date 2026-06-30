@@ -1,0 +1,10 @@
+JavaScript is a popular programming language.
+It is mainly used for web development.
+HTML provides the structure of a webpage.
+CSS is used to style the webpage.
+JavaScript adds interactivity to websites.
+APIs help applications exchange data.
+AJAX allows data loading without refreshing the page.
+Promises handle asynchronous operations efficiently.
+React is a JavaScript library for building user interfaces.
+Learning DSA helps improve problem-solving skills.

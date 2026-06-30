@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <style>
+        pre{
+            color:firebrick;
+        }
+    </style>
+</head>
+<body>
+    <h1>Promises</h1>
+    <p>promise is a object that represents a result success or failure in future</p>
+    <pre class="container"><pre/>
+    <!-- js code  -->
+    <script>
+        let container=document.querySelector(".container")
+        // promise object 
+        let p=new Promise((success,failure)=>{
+            let xhr=new XMLHttpRequest()
+            xhr.open("GET","test.txt",true)
+            xhr.send()
+            xhr.onload=()=>{
+                if(xhr.status==200){
+                    success(xhr.responseText)
+                }
+                else{
+                    failure("Error occured")
+                }
+            }
+        })
+        p.then((output)=>{
+            container.innerHTML=output
+        })
+        p.catch((result)=>{
+            
+            container.innerHTML=result
+        })
+        
+    </script>
+</body>
+</html>
