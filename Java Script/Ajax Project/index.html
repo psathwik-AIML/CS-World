@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Project</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-2 img {
+            width: 100%;
+        }
+
+        button {
+            margin: 10px;
+            background-color: aquamarine;
+            font-size: 20px;
+            cursor: pointer;
+            border: 0;
+            padding: 4px 10px;
+        }
+
+        .input {
+            padding: 8px;
+            border: 0;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="project-1">
+        <h2>Project 1</h2>
+        <div class="box box-1"></div>
+        <button id="button-1">click me</button>
+        <hr>
+        <div class="project-2">
+            <h2>Project 2</h2>
+            <input type="text" placeholder="Enter Flavour Name" class="input">
+            <div class="box box-2"></div>
+            <button id="button-2">click me</button>
+        </div>
+        <!-- js code  -->
+        <script>
+            let b1 = document.querySelector("#button-1")
+            let b2 = document.querySelector("#button-2")
+            let box1 = document.querySelector(".box-1")
+            let box2 = document.querySelector(".box-2")
+            let input = document.querySelector(".input")
+
+            b1.addEventListener('click', firstTask)
+            b2.addEventListener('click', secondTask)
+
+            function firstTask() {
+                // creation of object 
+                let xhr = new XMLHttpRequest()
+                xhr.open('GET', 'demo.json', true)
+                xhr.send()
+                xhr.onload = () => {
+                    let result = xhr.responseText
+                    result = JSON.parse(result)
+                    box1.innerHTML = `<h4>hello ${result.name}</h4>`
+                }
+            }
+            secondTask()
+            input.onchange = () => {
+                secondTask()
+            }
+            function secondTask() {
+                let flavour = input.value || "c"
+                //  flavour=input.value
+                let url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${flavour}`
+
+                // creation of object 
+                let xhr = new XMLHttpRequest()
+                xhr.open('GET', url, true)
+                xhr.send()
+                xhr.onload = () => {
+                    let result = JSON.parse(xhr.responseText)
+                    if (result.drinks) {
+                        box2.innerHTML = `
+                <img src="${result.drinks[0].strDrinkThumb}">
+            `;
+                    } else {
+                        box2.innerHTML = "Drink not found";
+                    }
+                }
+
+            }
+        </script>
+</body>
+
+</html>
