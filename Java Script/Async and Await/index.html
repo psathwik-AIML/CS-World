@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <h1>Async and Await</h1>
+    <p>makes async code in to sync</p>
+    <!-- js code  -->
+     <script>
+       async  function test(){
+            let a=await 3;
+            return a+3
+        }
+        let s=test()
+        s.then((ss)=>console.log(ss))
+        
+     </script>
+</body>
+</html>
