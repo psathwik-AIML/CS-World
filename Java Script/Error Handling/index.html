@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Error Handling</h1>
+    <p>try and catch blocks are used to handle errors. <br>we write code that may be exists error in it in try block and catch block will recieve error </p>
+    <p>throw -it  is a keyword used to create error</p>
+    <!-- js code  -->
+     <script>
+        let x=10
+        try{
+            console.log("line1");
+            if(x<15){
+                throw "x is small"
+                console.log(10);
+            }
+            console.log(line2);
+        }
+        catch(err){
+            console.log(err);
+            
+        }
+        console.log("line3");
+     </script>
+</body>
+</html>
