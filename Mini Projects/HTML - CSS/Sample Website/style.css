@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.7)),url('./background-image.jpg');
+    background-position:center;
+    background-size:cover;
+}
+.navbar{
+    /* border:1px solid red; */
+    width:80%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+.navbar .logo{
+    color:gold;
+    font-size:40px;
+    text-decoration:none;
+    letter-spacing:3px;
+    font-weight:800;
+}
+.navbar ul{
+    /* border:1px solid red; */
+    display:flex;
+    gap:20px;
+}
+.navbar ul li{
+    list-style:none;
+    position:relative;
+}
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+}
+.navbar ul li::after{
+    content:"";
+    width:0;
+    height:3px;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    background-color:gold;
+    transition:0.4s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+.content{
+    width:100%;
+    /* border:1px solid red; */
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    text-align:center;
+    padding:10px 10%;
+}
+.content h1{
+    font-size:70px;
+}
+.content p{
+    font-size:25px;
+}
+.content button{
+    width:200px;
+    padding:10px 0;
+    border-radius:20px;
+    border:2px solid gold;
+    outline:0;
+    font-weight:600;
+    font-size:20px;
+    background-color:transparent;
+    margin:50px 30px;
+    position:relative;
+    cursor: pointer;
+}
+span{
+    background-color:rgb(209, 182, 29);
+    position:absolute;
+    width:0;
+    left:0;
+    top:0px;
+    height:100%;
+    border-radius:20px;
+    transition:0.5s;
+    z-index:-1;
+}
+.content button:hover span{
+    width:100%;
+}
+.footer{
+    /* border:2px solid red; */
+    background-color:#222;
+    width:100%;
+    padding:20px 9%;
+}
+.footer-container{
+    /* border:1px solid red; */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+.box{
+    /* border:1px solid red; */
+    width:200px;
+    padding:10px;
+}
+.box h3{
+    margin-bottom:10px;
+}
+.box li{
+    list-style:none;
+    font-size:16px;
+    margin:20px 10px ;
+}
+.box li  a{
+    color:dodgerblue;
+}
+.box li  a:hover{
+    color:gold;
+    text-decoration:none;
+}
+.credits{
+    text-align:center;
+}
