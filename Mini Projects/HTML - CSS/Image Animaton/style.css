@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+img{
+    width:400px;
+    /* filter:hue-rotate(0deg) */
+    animation:change 2s linear alternate infinite;
+}
+
+/* animation  */
+@keyframes change{
+    to{
+        filter:hue-rotate(360deg);
+    }
+}
