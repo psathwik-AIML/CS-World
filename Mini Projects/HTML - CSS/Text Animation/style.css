@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+input{
+    padding:6px 10px;
+    border-radius:10px;
+    font-size:20px;
+    outline:none;
+    border:1px solid;
+    background-color:#000;
+    margin-bottom:50px;
+}
+h1{
+    letter-spacing:10px;
+}
+.wave{
+    position:relative;
+    left:20px;
+    animation:animate 1s infinite ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        top:0;
+    }
+    50%{
+        top:-20px;
+    }
+    100%{
+        top:0;
+    }
+}
