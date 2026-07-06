@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype & __proto__ Demystified</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .p {
+            color: purple;
+            font-weight: bold;
+        }
+        h2 {
+            color: orange;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prototype and __proto__</h1>
+    
+    <ul>
+        <li>Every function you create in JavaScript automatically gets an empty object attached to it called <b>prototype</b>.</li>
+        <li>Every object created in JavaScript automatically gets a hidden property called <b>__proto__</b>.</li>
+        <li>The <b>prototype</b> is used to share properties and methods like inheriting from parent to child.</li>
+        <li>This pattern is used to <b>save memory</b> by preventing duplicate code allocations.</li>
+        <li><b>prototype</b> belongs to the function (the creator).</li>
+        <li><b>__proto__</b> belongs to the object instance (the creation).</li>
+    </ul>
+
+    <hr>
+    
+    <h2>JavaScript Code</h2>
+    <p class="p">Open your browser console (F12) to see the output!</p>
+
+    <!-- JavaScript Code Execution -->
+    <script>
+        // 1. Constructor Function (The Blueprint Factory)
+        function marvel(movie, hero) {
+            this.movie = movie;
+            this.hero = hero;
+        }
+
+        // 2. Add a shared method to the prototype to save memory
+        marvel.prototype.getDetails = function() {
+            return `${this.hero} stars in ${this.movie}`;
+        };
+
+        // 3. Create individual object instances
+        let m1 = new marvel("Iron Man", "Tony Stark");
+        let m2 = new marvel("Captain America", "Steve Rogers");
+
+        // 4. Test 1: Check if the instance links back to the factory blueprint
+        console.log("Are they identical?", marvel.prototype === m1.__proto__); // Prints: true
+
+        // 5. Test 2: Call the shared prototype method from both instances
+        console.log("Instance 1:", m1.getDetails()); // Prints: Tony Stark stars in Iron Man
+        console.log("Instance 2:", m2.getDetails()); // Prints: Steve Rogers stars in Captain America
+
+        // 6. Test 3: Inspect the full object tree inside the console
+        console.dir(m1);
+    </script>
+</body>
+</html>
