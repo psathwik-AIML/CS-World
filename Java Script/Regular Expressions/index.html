@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <style>
+        span{
+            color:gold;
+        }
+        img{
+            width:40%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Regular Expression</h1>
+    <p>regular expression a sequence of characters and used to for search patterns</p>
+    <p>reg exp syntax: <span> /pattern/ [flags]</span></p>
+    <h3>Ways to Use Regular Expression:</h3>
+    <ol>
+        <li>Literal Notation</li>
+        <li>Using Constructor function</li>
+    </ol>
+    <img src="./brackets.png" alt="">
+    <img src="./quantifiers.png" alt="">
+    <!-- js code  -->
+     <script>
+        // literal notation 
+
+        let re1=/hello/
+        let s1=re1.test("first word we speak in phone calls is hello")
+        console.log(`re-1 : ${s1}`)
+        // ^ means starts with 
+        let re2=/^p/
+        let s2=re2.test("parrot is green")
+        console.log(`re-2 : ${s2}`)
+        // $ ends with
+        let re3=/u$/
+        let s3=re3.test("central processing unit is cpu")
+        console.log(`re-3 : ${s3}`)
+        // ^ (starts) and $ (ends) with .* (middle any characters)
+        let re4=/^w.*d$/
+        let s4=re4.test("welcome to coding world")
+        console.log(`re-4 : ${s4}`)
+
+        // using constructor function 
+        let re=new RegExp("is")
+        console.log(re.test("sand is soid"));
+        
+
+        // examples 
+        // i mean insensitive = no case sensitive 
+        let r1=/Hello/i
+        console.log(r1.test("hello iam coder"));
+        // g means global 
+        let r2=/var/g
+        console.log(r2.test("variable is varnished"));
+        
+
+        // exec is more info it gives 
+        let r3=/code/
+        console.log(r3.exec("hello coders"));
+        
+        console.log("......................");
+        
+
+        // notations /rules: 
+
+        console.info("BRACKETS:")
+        
+        // [...........]
+        // a or 8 or 9 
+        let reg=/[a89]/
+        console.log(reg.test("helloa"));
+        // [^...........]
+        // except a or except 8 or except 9 
+        reg=/[^a89]/
+        console.log(reg.test("a89aaa8"));
+        // [0-9]
+        // 0/1/2/.../9 
+        reg=/[0-9]/
+        console.log(reg.test("999"));
+        // [a-z]
+        // a/b/c/d/....z
+        reg=/[a-z]/
+        console.log(reg.test("9t99"));
+        // [A-Z]
+        // A/B/C ...Z
+        reg=/[A-Z]/
+        console.log(reg.test("P09"));
+        // [a-Z]
+        // a/b/c/...z or A/B/C ...Z
+        reg=/[A-Z]/
+        console.log(reg.test("aCVut"));
+        
+        console.info("QUANTIFIERS:")
+        // for specifying the number of occurences of a characters
+
+        // *  means zero or more times 
+        reg=/ps*/
+        console.log(reg.test("ps"));
+        console.log(reg.test("pssssss"));
+        // + means zero or more times 
+        reg=/iu+/
+        console.log(reg.test("pu"));
+        console.log(reg.test("iuuu"));
+        // ? means zero or one time 
+        reg=/bs?/
+        console.log(reg.test("b"));
+        console.log(reg.test("bss"));
+        // {n }means exactly n times 
+        reg=/hai{4}/
+        console.log(reg.test("hai"));
+        console.log(reg.test("haiiiiiip"));
+        // {n,}means at least n times 
+        reg=/hai{4,}/
+        console.log(reg.test("hai"));
+        console.log(reg.test("haiiiiipp"));
+        
+     </script>
+</body>
+</html>
