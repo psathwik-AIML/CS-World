@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Characters</title>
+</head>
+<body>
+    <h1>Meta Characters</h1>
+    <p>used in regular expressions</p>
+    <!-- js code  -->
+     <script>
+        let reg=/hello/
+        console.log(reg.test("hello  world"));
+
+        // . means any single character 
+        reg=/s./
+        console.log(reg.test("sss"));
+        // \d means any 0-9 
+        reg=/s\d/
+        console.log(reg.test("ssds9"));
+        // \D means any thing that is not a digit   
+        reg=/s\D/
+        console.log(reg.test("s-09"));
+        // \w means any thing from 0-9 a-z A-Z _  
+        reg=/s\w/
+        console.log(reg.test("s_ji"));
+        // \W means any thing not from 0-9 a-z A-Z _
+        reg=/s\W/
+        console.log(reg.test("s-i"));
+        
+
+        // use backward and symbol for built in 
+        reg=/s\.code/
+        console.log(reg.test("iam s.code and i love coding"));
+        
+     </script>
+</body>
+</html>
